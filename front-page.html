@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="assets/slick/slick.css"/>
+    <link rel="stylesheet" href="assets/slick/slick-theme.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin=""/>
+    <script defer src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+    <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script defer type="text/javascript" src="assets/slick/slick.min.js"></script>
+    <script defer src="assets/scripts.js"></script>
+    <title>Just Dance</title>
+</head>
+<body>
+
+    <nav class="navigation" id="nav">
+        <div class="navigation-wrapper flex-b">
+              <div class="navigation-logo">
+                <a href="front-page.html">
+                    <img src="img/logo_new.png">
+                </a>
+            </div>
+            <div class="navigation-menu-container flex-nw">
+                <ul class="navigation-menu flex-nw" id="nav-link">
+                    <li>
+                        <a href="#schedule" id="schedule-link" class="nav-item">SCHEDULE</a>
+                    </li>
+                    <li>
+                        <a href="#pricing" id="pricing-link" class="nav-item">PRICING</a>
+                    </li>
+                    <li>
+                        <a href="#our-team" id="our-team-link" class="nav-item">OUR TEAM</a>
+                    </li>
+                    <li>
+                        <a href="#contact-us" id="contact-us-link" class="nav-item">CONTACT US</a>
+                    </li>
+                </ul>
+                <div class="register-button flex-c modal-open">
+                    <p>REGISTER NOW</p>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="fullsized-section">
+        <div class="fullsized-photo" style="background-image: url(./img/image-1.png)"></div>
+        <div class="central-container flex-col flex-b">
+            <div class="central-container-description">
+                <h1>JUST DANCE</h1>
+                <p>DO YOU WANT TO SIGNUP</p>
+                <p>FOR A DANCE COURSE?</p>
+                <div class="register-button flex-c modal-open">
+                    <p>REGISTER NOW</p>
+                </div>
+            </div>
+            <div class="arrow-scroll" id="scrolling"></div>
+        </div>
+    </section>
+
+    <section id="about-us">
+        <div class="section about flex-c flex-col">
+            <div class="section-photo" style="background-image: url(./img/image-2.png)"></div>
+            <div class="section-container flex-col flex-b">
+                <h2>ABOUT US</h2>
+                <p>For 10 years, Just Dance has been introducingthe art of dance to people of all ages!</p>
+                <p>Just Dance Studio was launched in 2010. Over the years, 
+                    we have become a close-knit artistic troupe, and many of the women and men 
+                    who had attended our classes became participants in world dance shows. 
+                    Just Dance Studio has the best teachers and a huge number of types of dances. 
+                    We will help you immerse yourself in the music, and not only hear but also feel it!</p>
+                <div class="social-media flex-c flex-nw">
+                    <a href="#">
+                        <img src="./img/fb.svg" alt="facebook-logo">
+                    </a>
+                    <a href="#">
+                        <img src="./img/ig.svg" alt="instagram-logo">
+                    </a>
+                </div>
+            </div>
+            <div class="values">
+                <div class="values-wrapper flex-b">
+                    <div class="values-single flex-col flex-c">
+                        <p id="number1">0</p>
+                        <p>Years of experience</p>
+                    </div>
+                    <div class="values-single flex-col flex-c">
+                        <p id="number2">0</h3>
+                        <p>Ballrooms</p>
+                    </div>
+                    <div class="values-single flex-col flex-c">
+                        <p id="number3">0</p>
+                        <p>Instructors</p>
+                    </div>
+                    <div class="values-single flex-col flex-c">
+                        <p id="number4">0</p>
+                        <p>International awards</p>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials" class="testimonials" >
+        <div class="section flex-c">
+            <div class="section-photo two" style="background-image: url(./img/image-3.png)"></div>
+            <div class="section-container two flex-c flex-col">
+                <h2 class="margined second">TESTIMONIALS</h2>
+                <ul class="slider testimonials-slider">
+                    <li class="flex-c flex-col flex-b">
+                        <p class="names">Amy & Sam</p>
+                        <p>We are tango lovers and we were looking for a new dance studio. We chose Just Dance Studio and didn't regret! The passion and experience of the teachers are impressive, and with their guidance, we learn new techniques!</p>
+                        <p>October, 2021</p>
+                    </li>
+                    <li class="flex-c flex-col flex-b">
+                        <p class="names">Tom & Jerry</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam gravida efficitur lorem eget malesuada. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Maecenas porttitor nunc sed mauris molestie.</p>
+                        <p>October, 2022</p>
+                    </li>
+                    <li class="flex-c flex-col flex-b">
+                        <p class="names">Ed & Eddy</p>
+                        <p>Sed egestas urna ultrices, tempor est a, venenatis diam. Duis ullamcorper lectus placerat egestas aliquam. Donec dictum pellentesque orci, et pellentesque diam placerat posuere.</p>
+                        <p>October, 2023</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="schedule" class="schedule nav-anchor">
+        <div class="section">
+            <div class="section-photo scheduled two" style="background-image: url(./img/image-4.png)"></div>
+            <div class="section-photo scheduled" style="background-image: url(./img/image-5.png)"></div>
+            <div class="section-container flex-c flex-col">
+                <h2 class="margined">SCHEDULE</h2>
+                <ul class="slider-schedule flex-nw">                    
+                    <li class="flex-col">
+                        <div class="day">MONDAY</div>
+                        <div class="day-description flex-c flex-col">
+                            <div class="day-lesson">
+                                <p>18:00 - 19:00</p>
+                                <p>JAZZ L1</p>
+                            </div>
+                            <div class="day-lesson">
+                                <p>18:00 - 19:00</p>
+                                <p>JAZZ L1</p>
+                            </div>
+                            <div class="day-lesson">
+                                <p>18:00 - 19:00</p>
+                                <p>JAZZ L1</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="flex-col">
+                        <div class="day">TUESDAY</div>
+                        <div class="day-description flex-c flex-col">
+                            <div class="day-lesson">
+                                <p>18:00 - 19:00</p>
+                                <p>JAZZ L1</p>
+                            </div>
+                            <div class="day-lesson">
+                                <p>18:00 - 19:00</p>
+                                <p>JAZZ L1</p>
+                            </div>
+                            <div class="day-lesson">
+                                <p>18:00 - 19:00</p>
+                                <p>JAZZ L1</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="flex-col">
+                        <div class="day">WEDNESDAY</div>
+                        <div class="day-description flex-c flex-col">
+                            <div class="day-lesson">
+                                <p>18:00 - 19:00</p>
+                                <p>JAZZ L1</p>
+                            </div>
+                            <div class="day-lesson">
+                                <p>18:00 - 19:00</p>
+                                <p>JAZZ L1</p>
+                            </div>
+                            <div class="day-lesson">
+                                <p>18:00 - 19:00</p>
+                                <p>JAZZ L1</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="flex-col">
+                        <div class="day">THURSDAY</div>
+                        <div class="day-description flex-c flex-col">
+                            <div class="day-lesson">
+                                <p>18:00 - 19:00</p>
+                                <p>JAZZ L1</p>
+                            </div>
+                            <div class="day-lesson">
+                                <p>18:00 - 19:00</p>
+                                <p>JAZZ L1</p>
+                            </div>
+                            <div class="day-lesson">
+                                <p>18:00 - 19:00</p>
+                                <p>JAZZ L1</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="flex-col">
+                        <div class="day">FRIDAY</div>
+                        <div class="day-description flex-c flex-col">
+                            <div class="day-lesson">
+                                <p>18:00 - 19:00</p>
+                                <p>JAZZ L1</p>
+                            </div>
+                            <div class="day-lesson">
+                                <p>18:00 - 19:00</p>
+                                <p>JAZZ L1</p>
+                            </div>
+                            <div class="day-lesson">
+                                <p>18:00 - 19:00</p>
+                                <p>JAZZ L1</p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <div class="register-button modal-open">
+                    <p>REGISTER NOW</p>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+    
+    <section id="pricing" class="pricing nav-anchor">
+        <div class="section">
+            <div class="section-photo priced two" style="background-image: url(./img/image-7.png)"></div>
+            <div class="section-photo priced" style="background-image: url(./img/image-8.png)"></div>
+            <div class="section-container flex-c flex-col">
+                <h2 class="margined">PRICING</h2>
+                <div class="pricing-wrapper flex-col">
+                    <div class="pricing-item flex-b">
+                        <div class="pricing-item-title">1 CLASS</div>
+                        <div class="pricing-item-description">An entrance to one class of your choice</div>
+                        <div class="pricing-item-cost">30 $</div>
+                        <div class="register-button">REGISTER NOW</div>
+                    </div>
+                    <div class="pricing-item flex-b">
+                        <div class="pricing-item-title">4 CLASS PACK</div>
+                        <div class="pricing-item-description">Valid for 4 weeks, 4 entrances to classes of your choices</div>
+                        <div class="pricing-item-cost">110 $</div>
+                        <div class="register-button">REGISTER NOW</div>
+                    </div>
+                    <div class="pricing-item flex-b">
+                        <div class="pricing-item-title">UNLIMITED MEMBERSHIP</div>
+                        <div class="pricing-item-description">An entrance to one class of your choice</div>
+                        <div class="pricing-item-cost">160 $</div>
+                        <div class="register-button">REGISTER NOW</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="our-team" class="our-team nav-anchor">
+        <div class="section flex-c flex-col">
+            <h2 class="margined">OUR TEAM</h2>
+            <div class="slider-team-wrapper">
+                <ul class="slider-team flex-nw">
+                    <li class="slider-team-item flex-col">
+                        <div class="slider-team-img" style="background-image: url(./img/team-1.png)"></div>
+                        <div class="slider-team-name">Jeff Richards</div>
+                        <div class="slider-team-description">Ballroom dance instructor</div>
+                    </li>
+                    <li class="slider-team-item flex-col">
+                        <div class="slider-team-img" style="background-image: url(./img/team-2.png)"></div>
+                        <div class="slider-team-name">Alice Burton</div>
+                        <div class="slider-team-description">Ballet instructor</div>
+                    </li>
+                    <li class="slider-team-item flex-col">
+                        <div class="slider-team-img" style="background-image: url(./img/team-3.png)"></div>
+                        <div class="slider-team-name">Michael Epson</div>
+                        <div class="slider-team-description">Hip Hop instructor</div>
+                    </li>
+                    <li class="slider-team-item flex-col">
+                        <div class="slider-team-img" style="background-image: url(./img/team-4.png)"></div>
+                        <div class="slider-team-name">Susanne Pellen</div>
+                        <div class="slider-team-description">Bachata instructor</div>
+                    </li>
+                    <li class="slider-team-item flex-col">
+                        <div class="slider-team-img" style="background-image: url(./img/team-2.png)"></div>
+                        <div class="slider-team-name">Place Holder</div>
+                        <div class="slider-team-description">Cha cha instructor</div>
+                    </li>
+                </ul>
+            </div>
+            <div class="team-contact flex-col">
+                <p>Want to join our team?</p>
+                <p>Leave us a message on: <a href="mailto: justdance@email.com">justdance@email.com</a></p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact-us" class="nav-anchor contact-us flex-nw">
+        <div class="section-half">
+            <div class="content">
+                <h2>CONTACT US</h2>
+                <div class="content-grid">
+                    <p class="enhanced">ADDRESS</p>
+                    <div class="flex-col">
+                        <p>68-12 Eliot Ave</p>
+                        <p>Flushing, NY 11379</p>
+                    </div>
+                    <p class="enhanced">OPENING HOURS</p>
+                    <div class="flex-col">
+                        <p>Monday - Friday</p>
+                        <p>11 AM - 10 PM</p>
+                    </div>
+                    <p class="enhanced">EMAIL</p>
+                    <a href="mailto: justdance@email.com">justdance@email.com</a>
+                    <p class="enhanced">PHONE NUMBER</p>
+                    <a href="+1 (234) 567 89 00">+1 (234) 567 89 00</a>
+                    <p class="enhanced">FIND US</p>
+                    <div class="flex-nw content-socials">
+                        <a href="#">
+                            <img src="img/fb-2.svg">
+                        </a>
+                        <a href="#">
+                            <img src="img/ig-2.svg">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section-half" style="display: flex; align-items: center; border:1px solid red;">
+            <p style="color: #000;">mapa</p>
+        </div>
+    </section>
+
+    <div class="modal flex-c" id="modal">
+        <div class="modal-wrapper">
+            <div class="modal-closing-button" id="modal-close"></div>
+            <div class="modal-content" id="modal-content">
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="footer-wrapper">
+            <div class="footer-top flex-nw">
+                <div class="footer-top-item flex-col">
+                    <div class="footer-top-title">
+                        <h4>ADDRESS</h4>
+                    </div>
+                    <div class="footer-top-desc flex-col flex-c">
+                        <p>68-12 Eliot Ave</p>
+                        <p>Flushing, NY 11379</p>
+                    </div>
+                </div>
+                <div class="footer-top-item flex-col">
+                    <div class="footer-top-title">
+                        <h4>OPENING HOURS</h4>
+                    </div>
+                    <div class="footer-top-desc flex-col flex-c">
+                        <p>Monday - Friday</p>
+                        <p>11 AM - 10 PM</p>
+                    </div>
+                </div>
+                <div class="footer-top-item flex-col">
+                    <div class="footer-top-title">
+                        <h4>EMAIL</h4>
+                    </div>
+                    <div class="footer-top-desc flex-col flex-c">
+                        <a href="mailto: justdance@email.com">justdance@email.com</a>
+                    </div>
+                </div>
+                <div class="footer-top-item flex-col">
+                    <div class="footer-top-title">
+                        <h4>PHONE NUMBER</h4>
+                    </div>
+                    <div class="footer-top-desc flex-col flex-c">
+                        <a href="tel: +1 (234) 567 89 00">+1 (234) 567 89 00</a>
+                    </div>
+                </div>
+                <div class="footer-top-item flex-col">
+                    <div class="footer-top-title">
+                        <h4>FIND US</h4>
+                    </div>
+                    <div class="footer-top-desc flex-col flex-c">
+                        <div class="social-media flex-c flex-nw">
+                            <a href="#">
+                                <img src="./img/fb-3.svg" alt="facebook-logo">
+                            </a>
+                            <a href="#">
+                                <img src="./img/ig-3.svg" alt="instagram-logo">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-bottom-logo">
+                    <img src="img/logo_new.png">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

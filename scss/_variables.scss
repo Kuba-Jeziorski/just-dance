@@ -1,0 +1,22 @@
+$first: #101010;
+$second:#FEFEFE;
+$third:#B8A68E;
+
+@function color($color-name) {
+    @return map-get($colors, $color-name);
+}
+
+// $font-sizes: (
+//     xl: 6rem,
+//     lg: 2.5rem,
+//     md: 2rem,
+//     sm: 1.8rem,
+//     xs: 1.6rem
+// );
+
+// @function size($size) {
+//     @return map-get($font-sizes, $size);
+// }
+
+
+ 
