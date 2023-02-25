@@ -332,17 +332,11 @@
             </div>
         </div>
         <div class="section-half" style="display: flex; align-items: center; border:1px solid red;">
-            <p style="color: #000;">mapa</p>
+            <p style="color: #000;">
+                mapa
+            </p>
         </div>
     </section>
-
-    <div class="modal flex-c" id="modal">
-        <div class="modal-wrapper">
-            <div class="modal-closing-button" id="modal-close"></div>
-            <div class="modal-content" id="modal-content">
-            </div>
-        </div>
-    </div>
     
     <footer>
         <div class="footer-wrapper">
@@ -404,6 +398,44 @@
             </div>
         </div>
     </footer>
+
+    <div class="modal flex-c" id="modal">
+        <div class="modal-wrapper">
+            <div class="modal-closing-button" id="modal-close"></div>
+            <div class="modal-content" id="modal-content">
+                <div id="modal-validated" class="flex-c">
+                    <div class="modal-image" style="background-image: url(./img/form-validated.png)"></div>
+                    <div class="modal-inner flex-c flex-col">
+                        <p>Great!</p>
+                        <div class="modal-middle flex-col">
+                            <p>You are know signed up for the <span id="selected-opt"></span> course.</p>
+                            <p>Check your email for further instructions.</p>
+                        </div>
+                        <p>See you soon!</p>
+                    </div>
+                </div>
+                <form class="flex-col" id="registration-form">
+                    <div class="select-wrapper">
+                        <select name="dance-courses" id="dance-courses">
+                            <option value="SELECT COURSE" disabled>SELECT COURSE</option>
+                            <option value="JAZZ L0">JAZZ L0</option>
+                            <option value="JAZZ L1">JAZZ L1</option>
+                            <option value="BALLET L0">BALLET L0</option>
+                            <option value="BALLET L1">BALLET L1</option>
+                            <option value="HIP-HOP L0">HIP-HOP L0</option>
+                            <option value="HIP-HOP L1">HIP-HOP L1</option>
+                            <option value="BALLROOM L0">BALLROOM L0</option>
+                            <option value="BALLROOM L1">BALLROOM L1</option>
+                          </select>
+                    </div>
+                      <input type="text" placeholder="NAME AND SURNAME" required>
+                      <input type="email" placeholder="EMAIL" required>
+                      <input type="tel" placeholder="PHONE NUMBER" required>
+                      <input type="submit" value="REGISTER NOW">
+                </form>
+            </div>
+        </div>
+    </div>
 
 </body>
 </html>

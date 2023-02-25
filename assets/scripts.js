@@ -189,7 +189,7 @@ const modal = function() {
   const modalContent = document.querySelector('#modal-content');
   const modalClose = document.querySelector('#modal-close');
 
-  console.log(modalClose);
+  const mainFormValidated = document.querySelector("#modal-validated")
 
   const openingModal = function () {
     modalElement.style.display = 'flex';
@@ -197,14 +197,24 @@ const modal = function() {
 
   const closingModal = function (e) {
     // preventing from closing modal when click on content
+    // X button is now only element out of modalContent
     if (modalElement.style.display === 'flex' && !modalContent.contains(e.target)) {
       modalElement.style.display = 'none';
+    }
+
+    if (mainFormValidated.style.display === 'flex' && !modalContent.contains(e.target)) {
+      // hiding after closing modal
+      mainFormValidated.style.display = "none";
     }
   }
 
   const closingModalEscape = function(e) {
     if (modalElement.style.display === 'flex' && e.key === 'Escape') {
       modalElement.style.display = 'none';
+    }
+
+    if (mainFormValidated.style.display === 'flex' && e.key === 'Escape') {
+      mainFormValidated.style.display = "none";
     }
   }
 
@@ -216,3 +226,23 @@ const modal = function() {
 }
 
 modal();
+
+(function() {
+
+  const mainForm = document.querySelector("#registration-form");
+  const selected = document.querySelector("#dance-courses");
+  const selectedOption = document.querySelector("#selected-opt");
+
+  const mainFormValidated = document.querySelector("#modal-validated")
+
+
+  mainForm.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const selectedOptionContent = selected.options[selected.selectedIndex].value;
+    selectedOption.textContent = selectedOptionContent;
+    
+    mainFormValidated.style.display = "flex";
+
+  });
+})();
