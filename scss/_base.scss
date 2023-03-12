@@ -72,7 +72,7 @@ h1 {
 h2 {
     font-family: 'Limelight';
     color: $first;
-    font-size: 80px;
+    font-size: 4.2vw;
 }
 
 h2.margined {
@@ -92,7 +92,10 @@ ul {
 
 li {
     font-size: 1.7vw;
-    // zmienic z 32px na 24px
+
+    @media (max-width: 1550px) {
+        font-size: 24px;
+    }
 }
 
 a {
@@ -109,6 +112,10 @@ p {
     font-size: 1.7vw;
     margin-block-start: 0;
     margin-block-end: 0;
+
+    @media (max-width: 1500px) {
+        font-size: 24px;
+    }
 }
 
 select, input, ::placeholder {
@@ -157,6 +164,10 @@ input[type="submit"] {
     text-align: center;
 }
 
+footer {
+    background-color: $third;
+}
+
 
 .flex {
     display: flex;
@@ -192,6 +203,11 @@ ul.slider {
     width: 100%;
 }
 
+.overflowed {
+    overflow: hidden;
+    width: 100%;
+}
+
 #nav {
     background-color: transparent;
     transition: background-color 0.3s linear;
@@ -212,8 +228,13 @@ ul.slider {
 
     &-wrapper {
         height: 100%;
-        padding: 0 95px;
+        max-width: 1710px;
+        margin: 0 auto;
         align-items: center;
+
+        @media (max-width: 1750px) {
+            max-width: 1450px;
+        }
     }
 
     &-logo {
@@ -337,6 +358,14 @@ ul.slider {
 
         p {
             font-size: 24px;
+
+            @media (max-width:1550px) {
+                font-size: 22px;
+            }
+        }
+
+        @media (max-width:1500px) {
+            max-width: 600px;
         }
     }
 
@@ -371,6 +400,10 @@ ul.slider {
                 font-family: 'Limelight';
                 font-size: 120px;
                 margin: 0;
+
+                @media (max-width:1500px) {
+                    font-size: 100px;
+                }
             }
         }
     }
@@ -514,13 +547,21 @@ ul.slider {
             display: flex !important;
             justify-content: space-between !important;
             background-color: rgba(255, 245, 233, 0.39);
+            
+            p {
 
-            p.names {
-                color: #160C0B;
-                font-size: 32px;
-                line-height: 1.2;
-                font-weight: 500;
+                .names {
+                    color: #160C0B;
+                    font-size: 32px;
+                    line-height: 1.2;
+                    font-weight: 500;
+                }
+
+                &:last-of-type {
+                    margin: 30px 0 0;
+                }
             }
+            
         }
     }
 }
@@ -533,11 +574,14 @@ ul.slider {
         height: 100%;
 
         &-container {
-            width: 90%;
-            max-width: 100%;
+            max-width:1500px;
             margin: 0 auto;
             position: relative;
             z-index: 1;
+
+            @media (max-width: 1550px) {
+                max-width: 1200px;
+            }
         }
     }
 
@@ -545,13 +589,22 @@ ul.slider {
         width: 100%;
 
         .slick-track {
-            width: 100% !important;
+            width: 100%;
             display: flex;
             justify-content: space-between;
         }
 
         li {
-            width: 18% !important;
+
+            margin: 0 10px;
+            
+            &:first-of-type{
+                margin: 0 10px 0 0;
+            }
+
+            &:last-of-type{
+                margin: 0 0 0 10px;
+            }
 
             .day {
                 background-color: $third;
@@ -579,6 +632,10 @@ ul.slider {
                         padding: 15px 0 150px 0;
                         border-bottom: none;
                     }
+                }
+
+                @media (max-width: 1550px) {
+                    font-size: 32px;
                 }
             }
         }
@@ -613,6 +670,10 @@ ul.slider {
         &-container {
             max-width: 1300px;
             margin: 0 auto;
+
+            @media (max-width:1550px) {
+                max-width: 1200px;
+            }
         }
     }
 
@@ -641,12 +702,19 @@ ul.slider {
             color: $first;
             width: 20%;
 
+            @media (max-width: 1550px) {
+                font-size: 34px;
+            }
         }
 
         &-description {
             font-size: 24px;
             color: $first;
             width: 20%;
+
+            @media (max-width:1550px) {
+                font-size: 22px;
+            }
         }
 
         .register-button {
@@ -656,6 +724,10 @@ ul.slider {
             text-align: center;
             color: $first;
             font-size: 32px;
+
+            @media (max-width: 1550px) {
+                font-size: 28px;
+            }
         }
     }
 }
@@ -739,11 +811,19 @@ ul.slider {
             text-align: center;
             font-size: 32px;
             margin: 30px 0 0 0;
+
+            @media (max-width: 1550px) {
+                font-size: 28px;
+            }
         }
         &-description {
             color: $first;
             text-align: center;
             font-size: 25px;
+
+            @media (max-width: 1550px) {
+                font-size: 22px;
+            }
         }
     }
 
@@ -790,6 +870,11 @@ ul.slider {
                 color: $first;
                 font-size: 32px;
                 line-height: 38px;
+
+                @media (max-width: 1550px) {
+                    font-size: 26px;
+                    line-height: 34px;
+                }
             }
 
             a {
@@ -940,9 +1025,6 @@ ul.slider {
         display: none;
     }
 }
-
-footer {
-    background-color: $third;
     
     .footer {
 
@@ -956,6 +1038,10 @@ footer {
                 font-size: 32px;
                 line-height: 1.2;
                 margin: 0;
+
+                @media (max-width: 1550px) {
+                    font-size: 24px;
+                }
             }
 
             a {
@@ -968,6 +1054,10 @@ footer {
 
             h4 {
                 margin: 0 0 10px 0;
+            }
+
+            @media (max-width: 1750px) {
+                max-width: 1450px;
             }
         }
 
@@ -998,11 +1088,14 @@ footer {
             }
         }
     }
-}
 
 @media (min-width: 1920px) {
     h1 {
         font-size: 96px;
+    }
+
+    h2 {
+        font-size: 80px;
     }
 
     li {

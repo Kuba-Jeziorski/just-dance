@@ -63,6 +63,14 @@ $(document).ready(function(){
     arrows: true,
     autoplay: false,
     autoplaySpeed: 500,
+    responsive: [
+      {
+        breakpoint: 1001,
+        settings: {
+          slidesToShow: 3,
+        }
+      }
+    ]
   });
 });
 
@@ -76,6 +84,8 @@ $(document).ready(function(){
     autoplaySpeed: 500,
   });
 });
+
+
 
 // IMPORTANT Scroll to section while press #scrolling
 (function() {
@@ -246,3 +256,6 @@ modal();
 
   });
 })();
+
+// IMPORTANT
+// usunąć slick .js, bo jest z linku
