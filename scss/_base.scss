@@ -92,10 +92,6 @@ ul {
 
 li {
     font-size: 1.7vw;
-
-    @media (max-width: 1550px) {
-        font-size: 24px;
-    }
 }
 
 a {
@@ -112,10 +108,6 @@ p {
     font-size: 1.7vw;
     margin-block-start: 0;
     margin-block-end: 0;
-
-    @media (max-width: 1500px) {
-        font-size: 24px;
-    }
 }
 
 select, input, ::placeholder {
@@ -358,14 +350,6 @@ ul.slider {
 
         p {
             font-size: 24px;
-
-            @media (max-width:1550px) {
-                font-size: 22px;
-            }
-        }
-
-        @media (max-width:1500px) {
-            max-width: 600px;
         }
     }
 
@@ -400,10 +384,6 @@ ul.slider {
                 font-family: 'Limelight';
                 font-size: 120px;
                 margin: 0;
-
-                @media (max-width:1500px) {
-                    font-size: 100px;
-                }
             }
         }
     }
@@ -578,10 +558,6 @@ ul.slider {
             margin: 0 auto;
             position: relative;
             z-index: 1;
-
-            @media (max-width: 1550px) {
-                max-width: 1200px;
-            }
         }
     }
 
@@ -632,11 +608,7 @@ ul.slider {
                         padding: 15px 0 150px 0;
                         border-bottom: none;
                     }
-                }
-
-                @media (max-width: 1550px) {
-                    font-size: 32px;
-                }
+                }                
             }
         }
     }
@@ -670,10 +642,6 @@ ul.slider {
         &-container {
             max-width: 1300px;
             margin: 0 auto;
-
-            @media (max-width:1550px) {
-                max-width: 1200px;
-            }
         }
     }
 
@@ -701,20 +669,12 @@ ul.slider {
             font-weight: 700;
             color: $first;
             width: 20%;
-
-            @media (max-width: 1550px) {
-                font-size: 34px;
-            }
         }
 
         &-description {
             font-size: 24px;
             color: $first;
             width: 20%;
-
-            @media (max-width:1550px) {
-                font-size: 22px;
-            }
         }
 
         .register-button {
@@ -724,10 +684,6 @@ ul.slider {
             text-align: center;
             color: $first;
             font-size: 32px;
-
-            @media (max-width: 1550px) {
-                font-size: 28px;
-            }
         }
     }
 }
@@ -811,40 +767,33 @@ ul.slider {
             text-align: center;
             font-size: 32px;
             margin: 30px 0 0 0;
-
-            @media (max-width: 1550px) {
-                font-size: 28px;
-            }
         }
+
         &-description {
             color: $first;
             text-align: center;
             font-size: 25px;
+        }
 
-            @media (max-width: 1550px) {
-                font-size: 22px;
+        .team-contact {
+            p {
+                color: $first;
+                text-align: center;
+            }
+
+            a {
+                color: $first;
+                text-align: center;
+                display: inline-block;
+                translate: color 0.3s;
+
+                &:hover {
+                    color: $third;
+                }
             }
         }
+
     }
-
-    .team-contact {
-        p {
-            color: $first;
-            text-align: center;
-        }
-
-        a {
-            color: $first;
-            text-align: center;
-            display: inline-block;
-            translate: color 0.3s;
-
-            &:hover {
-                color: $third;
-            }
-        }
-    }
-
 }
 
 .contact-us {
@@ -870,11 +819,6 @@ ul.slider {
                 color: $first;
                 font-size: 32px;
                 line-height: 38px;
-
-                @media (max-width: 1550px) {
-                    font-size: 26px;
-                    line-height: 34px;
-                }
             }
 
             a {
@@ -1038,10 +982,6 @@ ul.slider {
                 font-size: 32px;
                 line-height: 1.2;
                 margin: 0;
-
-                @media (max-width: 1550px) {
-                    font-size: 24px;
-                }
             }
 
             a {
@@ -1087,6 +1027,10 @@ ul.slider {
                 }
             }
         }
+
+        .first-breakpoint-in {
+            display: none;
+        }
     }
 
 @media (min-width: 1920px) {
@@ -1104,5 +1048,212 @@ ul.slider {
 
     p {
         font-size: 24px;
+    }
+}
+
+@media (max-width: 1550px) {
+
+    li {
+        font-size: 24px;
+    }
+
+    p {
+            font-size: 22px;
+    }
+
+    .schedule {
+        .section-container {
+                max-width: 1200px;
+        }
+    }
+
+    .day {
+            font-size: 32px;
+    }
+
+    .pricing {
+        .section-container {
+            max-width: 1200px;
+        }
+
+        &-item {
+            &-title, &-cost {
+                    font-size: 34px;
+            }
+    
+            &-description {
+                    font-size: 22px;
+            }
+    
+            .register-button {
+                    font-size: 28px;
+            }
+        }
+    }
+
+    .our-team {
+
+        padding: 50px 0 0;
+
+        .slider-team {
+            &-name {
+                    font-size: 28px;
+            }
+    
+            &-description {
+                    font-size: 22px;
+            }
+        }
+    }
+
+    .contact-us {
+        .content-grid {
+            :is(p,a) {
+                    font-size: 26px;
+                    line-height: 34px;
+            }
+        }
+    }
+
+    .footer {
+        h4, p, a {
+                font-size: 24px;
+        }
+    }
+}
+
+@media (max-width: 1500px) {
+    li {
+        font-size: 22px;
+    }
+
+
+    .navigation, .footer {
+        &-wrapper {
+            max-width:1150px;
+        }
+    }
+
+    .footer {
+        &-wrapper {
+            :is(h4, p, a) {
+                font-size: 26px;
+            }
+        }
+    }
+
+    .section-container {
+        p {
+            font-size: 22px;
+        }
+    }
+
+    .schedule {
+        ul {
+            li {
+                .day {
+                    font-size: 36px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1400px) {
+    .section {
+        &-container {
+            max-width: 600px;
+
+            p {
+                font-size: 20px;
+            }
+        }
+    }
+
+    .section.about {
+        padding: 45px 0 0;
+
+        p {
+            &:first-of-type {
+                margin: 30px 0;
+            }
+        }
+
+        .values {
+            &-wrapper {
+                height: 200px; 
+            }
+        }
+    }
+
+    .schedule {
+        ul {
+            li {
+                .day {
+                    font-size: 32px;
+                }
+            }
+        }
+    }
+
+    .pricing {
+        padding: 0 0 150px;
+
+        .section {
+            &-container {
+                max-width: 900px;
+            }
+        }
+
+        &-item {
+            padding: 0 25px;
+
+            &-title, &-cost {
+                font-size: 32px;
+            }
+
+            &-description {
+                font-size: 20px;
+            }
+
+            .register-button {
+                width: 220px;
+                font-size: 22px;
+            }
+        }
+    }
+
+    .our-team {
+        padding: 0;
+    }
+
+    .contact-us {
+        .content-grid {
+            :is(p,a) {
+                    font-size: 24px;
+                    line-height: 30px;
+            }
+        }
+    }
+
+    footer {
+        .first-breakpoint-in {
+            display: flex;
+            justify-content: center;
+        }
+
+        .footer {
+            &-top-title.first-breakpoint-in {
+                margin: 40px 0 0;
+            }
+
+            &-top-desc.flex {
+                justify-content: flex-start;
+            }
+        }
+
+        .first-breakpoint-out {
+            display: none;
+        }
     }
 }

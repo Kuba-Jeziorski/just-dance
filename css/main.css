@@ -72,9 +72,6 @@ ul {
 
 li {
   font-size: 1.7vw; }
-  @media (max-width: 1550px) {
-    li {
-      font-size: 24px; } }
 
 a {
   display: block;
@@ -87,9 +84,6 @@ p {
   font-size: 1.7vw;
   margin-block-start: 0;
   margin-block-end: 0; }
-  @media (max-width: 1500px) {
-    p {
-      font-size: 24px; } }
 
 select, input, ::placeholder {
   color: #B8A68E;
@@ -249,12 +243,6 @@ ul.slider {
       color: #101010; }
     .section-container p {
       font-size: 24px; }
-      @media (max-width: 1550px) {
-        .section-container p {
-          font-size: 22px; } }
-    @media (max-width: 1500px) {
-      .section-container {
-        max-width: 600px; } }
   .section-half {
     width: 50%; }
 
@@ -277,9 +265,6 @@ ul.slider {
         font-family: 'Limelight';
         font-size: 120px;
         margin: 0; }
-        @media (max-width: 1500px) {
-          .section.about .values-single p:first-of-type {
-            font-size: 100px; } }
   .section.about .social-media {
     margin: 60px 0; }
     .section.about .social-media a {
@@ -405,9 +390,6 @@ ul.slider {
       margin: 0 auto;
       position: relative;
       z-index: 1; }
-      @media (max-width: 1550px) {
-        .schedule .section-container {
-          max-width: 1200px; } }
   .schedule ul {
     width: 100%; }
     .schedule ul .slick-track {
@@ -439,9 +421,6 @@ ul.slider {
           .schedule ul li .day-lesson:last-of-type {
             padding: 15px 0 150px 0;
             border-bottom: none; }
-        @media (max-width: 1550px) {
-          .schedule ul li .day {
-            font-size: 32px; } }
   .schedule .register-button {
     margin: 50px 0 35px;
     width: 300px;
@@ -463,9 +442,6 @@ ul.slider {
     .pricing .section-container {
       max-width: 1300px;
       margin: 0 auto; }
-      @media (max-width: 1550px) {
-        .pricing .section-container {
-          max-width: 1200px; } }
   .pricing-wrapper {
     width: 100%;
     height: 100%;
@@ -484,16 +460,10 @@ ul.slider {
       font-weight: 700;
       color: #101010;
       width: 20%; }
-      @media (max-width: 1550px) {
-        .pricing-item-title, .pricing-item-cost {
-          font-size: 34px; } }
     .pricing-item-description {
       font-size: 24px;
       color: #101010;
       width: 20%; }
-      @media (max-width: 1550px) {
-        .pricing-item-description {
-          font-size: 22px; } }
     .pricing-item .register-button {
       padding: 10px 0;
       margin: 0;
@@ -501,9 +471,6 @@ ul.slider {
       text-align: center;
       color: #101010;
       font-size: 32px; }
-      @media (max-width: 1550px) {
-        .pricing-item .register-button {
-          font-size: 28px; } }
 
 .our-team {
   width: 100%;
@@ -565,25 +532,19 @@ ul.slider {
     text-align: center;
     font-size: 32px;
     margin: 30px 0 0 0; }
-    @media (max-width: 1550px) {
-      .our-team .slider-team-name {
-        font-size: 28px; } }
   .our-team .slider-team-description {
     color: #101010;
     text-align: center;
     font-size: 25px; }
-    @media (max-width: 1550px) {
-      .our-team .slider-team-description {
-        font-size: 22px; } }
-  .our-team .team-contact p {
+  .our-team .slider-team .team-contact p {
     color: #101010;
     text-align: center; }
-  .our-team .team-contact a {
+  .our-team .slider-team .team-contact a {
     color: #101010;
     text-align: center;
     display: inline-block;
     translate: color 0.3s; }
-    .our-team .team-contact a:hover {
+    .our-team .slider-team .team-contact a:hover {
       color: #B8A68E; }
 
 .contact-us {
@@ -606,10 +567,6 @@ ul.slider {
         color: #101010;
         font-size: 32px;
         line-height: 38px; }
-        @media (max-width: 1550px) {
-          .contact-us .content-grid :is(p, a) {
-            font-size: 26px;
-            line-height: 34px; } }
       .contact-us .content-grid a {
         translate: color 0.3s; }
         .contact-us .content-grid a:hover {
@@ -719,9 +676,6 @@ ul.slider {
     font-size: 32px;
     line-height: 1.2;
     margin: 0; }
-    @media (max-width: 1550px) {
-      .footer-wrapper h4, .footer-wrapper p, .footer-wrapper a {
-        font-size: 24px; } }
   .footer-wrapper a {
     transition: .3s color; }
   .footer-wrapper a:hover {
@@ -748,6 +702,9 @@ ul.slider {
     width: 100%;
     height: auto; }
 
+.footer .first-breakpoint-in {
+  display: none; }
+
 @media (min-width: 1920px) {
   h1 {
     font-size: 96px; }
@@ -757,3 +714,85 @@ ul.slider {
     font-size: 24px; }
   p {
     font-size: 24px; } }
+
+@media (max-width: 1550px) {
+  li {
+    font-size: 24px; }
+  p {
+    font-size: 22px; }
+  .schedule .section-container {
+    max-width: 1200px; }
+  .day {
+    font-size: 32px; }
+  .pricing .section-container {
+    max-width: 1200px; }
+  .pricing-item-title, .pricing-item-cost {
+    font-size: 34px; }
+  .pricing-item-description {
+    font-size: 22px; }
+  .pricing-item .register-button {
+    font-size: 28px; }
+  .our-team {
+    padding: 50px 0 0; }
+    .our-team .slider-team-name {
+      font-size: 28px; }
+    .our-team .slider-team-description {
+      font-size: 22px; }
+  .contact-us .content-grid :is(p, a) {
+    font-size: 26px;
+    line-height: 34px; }
+  .footer h4, .footer p, .footer a {
+    font-size: 24px; } }
+
+@media (max-width: 1500px) {
+  li {
+    font-size: 22px; }
+  .navigation-wrapper, .footer-wrapper {
+    max-width: 1150px; }
+  .footer-wrapper :is(h4, p, a) {
+    font-size: 26px; }
+  .section-container p {
+    font-size: 22px; }
+  .schedule ul li .day {
+    font-size: 36px; } }
+
+@media (max-width: 1400px) {
+  .section-container {
+    max-width: 600px; }
+    .section-container p {
+      font-size: 20px; }
+  .section.about {
+    padding: 45px 0 0; }
+    .section.about p:first-of-type {
+      margin: 30px 0; }
+    .section.about .values-wrapper {
+      height: 200px; }
+  .schedule ul li .day {
+    font-size: 32px; }
+  .pricing {
+    padding: 0 0 150px; }
+    .pricing .section-container {
+      max-width: 900px; }
+    .pricing-item {
+      padding: 0 25px; }
+      .pricing-item-title, .pricing-item-cost {
+        font-size: 32px; }
+      .pricing-item-description {
+        font-size: 20px; }
+      .pricing-item .register-button {
+        width: 220px;
+        font-size: 22px; }
+  .our-team {
+    padding: 0; }
+  .contact-us .content-grid :is(p, a) {
+    font-size: 24px;
+    line-height: 30px; }
+  footer .first-breakpoint-in {
+    display: flex;
+    justify-content: center; }
+  footer .footer-top-title.first-breakpoint-in {
+    margin: 40px 0 0; }
+  footer .footer-top-desc.flex, footer .footer-top-desc.flex-b, footer .footer-top-desc.flex-c, footer .footer-top-desc.flex-col, footer .footer-top-desc.flex-nw, footer .footer-top-desc.flex-w {
+    justify-content: flex-start; }
+  footer .first-breakpoint-out {
+    display: none; } }
