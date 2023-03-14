@@ -746,7 +746,7 @@ ul.slider {
         height: 100%;
     }
 
-    .slider-team {
+    .team-slider {
         &-wrapper {
             max-width: 80%;
             height: 485px;
@@ -970,68 +970,68 @@ ul.slider {
     }
 }
     
-    .footer {
+.footer {
 
-        &-wrapper {
-            max-width: 1710px;
-            margin:0 auto;
-            padding: 65px 0;
+    &-wrapper {
+        max-width: 1710px;
+        margin:0 auto;
+        padding: 65px 0;
 
-            h4, p, a {
-                text-align: center;
-                font-size: 32px;
-                line-height: 1.2;
-                margin: 0;
-            }
-
-            a {
-                transition: .3s color;
-            }
-
-            a:hover {
-                color: $first;
-            }
-
-            h4 {
-                margin: 0 0 10px 0;
-            }
-
-            @media (max-width: 1750px) {
-                max-width: 1450px;
-            }
+        h4, p, a {
+            text-align: center;
+            font-size: 32px;
+            line-height: 1.2;
+            margin: 0;
         }
 
-        &-top {
-            justify-content: space-around;
-            padding: 0 0 45px 0;
-            border-bottom: 1px solid $second;
-            margin: 0 0 60px 0;
-
-            &-desc {
-                height: 100%;
-            }
-
-            .social-media {
-                gap: 10px;
-            }
+        a {
+            transition: .3s color;
         }
 
-        &-bottom {
-
-            &-logo {
-                max-width: 280px;
-
-                img {
-                    width: 100%;
-                    height: auto;
-                }
-            }
+        a:hover {
+            color: $first;
         }
 
-        .first-breakpoint-in {
-            display: none;
+        h4 {
+            margin: 0 0 10px 0;
+        }
+
+        @media (max-width: 1750px) {
+            max-width: 1450px;
         }
     }
+
+    &-top {
+        justify-content: space-around;
+        padding: 0 0 45px 0;
+        border-bottom: 1px solid $second;
+        margin: 0 0 60px 0;
+
+        &-desc {
+            height: 100%;
+        }
+
+        .social-media {
+            gap: 10px;
+        }
+    }
+
+    &-bottom {
+
+        &-logo {
+            max-width: 280px;
+
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+
+    .first-breakpoint-in {
+        display: none;
+    }
+}
 
 @media (min-width: 1920px) {
     h1 {
@@ -1095,7 +1095,7 @@ ul.slider {
 
         padding: 50px 0 0;
 
-        .slider-team {
+        .team-slider {
             &-name {
                     font-size: 28px;
             }
@@ -1107,10 +1107,18 @@ ul.slider {
     }
 
     .contact-us {
-        .content-grid {
-            :is(p,a) {
+        .content {
+            &-grid {
+                :is(p,a) {
                     font-size: 26px;
                     line-height: 34px;
+                }
+            }
+
+            &-socials {
+                img {
+                    width: 35px;
+                }
             }
         }
     }
@@ -1130,7 +1138,7 @@ ul.slider {
 
     .navigation, .footer {
         &-wrapper {
-            max-width:1150px;
+            max-width:1250px;
         }
     }
 
@@ -1254,6 +1262,192 @@ ul.slider {
 
         .first-breakpoint-out {
             display: none;
+        }
+    }
+}
+
+@media (max-width: 1300px) {
+    .navigation, .footer {
+        &-wrapper {
+            max-width: 1150px;
+        }
+    }
+
+    .navigation {
+        &-menu {
+            li {
+                padding: 0 15px;
+            }
+        }
+    }
+
+    .register-button {
+        width: 200px;
+        margin: 0 0 0 10px;
+    }
+
+    .section.about {
+        .values {
+            &-single {
+                p {
+                    &:first-of-type {
+                        font-size: 100px;
+                    }
+                }
+            }
+
+            &-wrapper {
+                height: 175px;
+                max-width: 850px;
+            }
+        }
+    }
+
+    .section {
+        &-container {
+            p {
+                font-size: 18px;
+            }
+        }
+    }
+
+    .schedule {
+        ul {
+            li {
+                .day {
+                    font-size: 28px;
+                }
+            }
+        }
+
+        .section {
+            &-container {
+                max-width: 100%;
+                padding: 0 50px;
+            }
+        }
+    }
+
+    .our-team {
+            .team-slider {
+                &-name {
+                    font-size: 24px;
+                }
+
+                &-description {
+                    font-size: 20px;
+                }
+            }
+    }
+
+    .contact-us {
+        .content-grid {
+            :is(p,a) {
+                font-size: 22px;
+                line-height: 26px;
+            }
+        }
+
+        .content {
+            max-width: 100%;
+            padding: 100px 50px 100px 100px;
+        }
+    }
+
+    .footer {
+        &-wrapper {
+            :is(h4,p,a) {
+                font-size: 24px;
+            }
+
+            .social-media {
+                img {
+                    width: 40px;
+                    aspect-ratio: 1/1;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .overflowed {
+        overflow: unset;
+    }
+
+    .navigation, .footer {
+        &-wrapper {
+            max-width: 100%;
+            padding: 0 50px;
+        }
+    }
+
+    .footer {
+        &-wrapper {
+            padding: 50px;
+        }
+    }
+
+    .schedule {
+        .section {
+            &-container {
+                max-width: 900px;
+                padding: 0;
+            }
+        }
+
+        &-slider {
+            .slick-prev, .slick-next {
+
+                width: 38px;
+                height: 53px;
+
+                &::before {
+                    content: '';
+                    display: block;
+                    width: 38px;
+                    height: 53px;
+                    background-size: cover;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                }
+            }
+
+            .slick-prev {
+                left: -75px;
+
+                &::before {
+                    background-image: url(../img/arrow-left.svg);
+                }
+            }
+
+            .slick-next {
+                right: -75px;
+                &::before {
+                    background-image: url(../img/arrow-right.svg);
+                }
+            }
+        }
+    }
+
+    .our-team {
+        .team {
+            &-slider {
+                &-wrapper {
+                    max-width: 700px;
+                    height: auto;
+                }
+
+                &-item {
+                    margin: 0 40px;
+                }
+            }
+        }
+
+        ul {
+            .slick-prev, .slick-next {
+                top: 40%;
+            }
         }
     }
 }

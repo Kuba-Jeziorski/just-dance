@@ -56,7 +56,7 @@ $(document).ready(function(){
 });
 
 $(document).ready(function(){
-  $('.slider-schedule').slick({
+  $('.schedule-slider').slick({
     slidesToShow: 5,
     slidesToScroll: 1,
     fade: false,
@@ -65,7 +65,7 @@ $(document).ready(function(){
     autoplaySpeed: 500,
     responsive: [
       {
-        breakpoint: 1001,
+        breakpoint: 1201,
         settings: {
           slidesToShow: 3,
         }
@@ -75,13 +75,21 @@ $(document).ready(function(){
 });
 
 $(document).ready(function(){
-  $('.slider-team').slick({
+  $('.team-slider').slick({
     slidesToShow: 4,
     slidesToScroll: 1,
     fade: false,
     arrows: true,
     autoplay: false,
     autoplaySpeed: 500,
+    responsive: [
+      {
+        breakpoint: 1201,
+        settings: {
+          slidesToShow: 2,
+        }
+      }
+    ]
   });
 });
 
@@ -143,53 +151,6 @@ $(document).ready(function(){
 
   window.addEventListener('scroll', checkTop)
 })();
-
-
-
-// (function(){
-//   let map = L.map('map').setView([40.718972147967, -73.89191347322442], 18);
-//   L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-//       maxZoom: 18,
-//       minZoom: 18,
-//       attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-//   }).addTo(map);
-  
-//   let myIcon = L.icon({
-//     iconUrl: '../img/marker.svg',
-  
-//     iconSize:     [70, 100], // size of the icon
-//     iconAnchor:   [-505, -280], // point of the icon which will correspond to marker's location
-//     popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
-//   });
-  
-//   L.marker([-505, -280], {icon: myIcon}).addTo(map);
-// })();
-
-// function getResolution() {
-//   alert("Your screen resolution is: " + screen.width + "x" + screen.height);
-// }
-
-// getResolution();
-
-//   let map = L.map('map').setView([40.718972147967, -73.89191347322442], 18);
-//   L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-//       maxZoom: 18,
-//       minZoom: 18,
-//       attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-//   }).addTo(map);
-
-// var greenIcon = L.icon({
-//   iconUrl: '../img/marker.svg',
-//   // shadowUrl: 'leaf-shadow.png',
-
-//   iconSize:     [38, 95], // size of the icon
-//   // shadowSize:   [50, 64], // size of the shadow
-//   iconAnchor:   [22, 94], // point of the icon which will correspond to marker's location
-//   // shadowAnchor: [4, 62],  // the same for the shadow
-//   popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
-// });
-
-// L.marker([51.5, -0.09], {icon: greenIcon}).addTo(map);
 
 
 // IMPORTANT modal
@@ -256,6 +217,3 @@ modal();
 
   });
 })();
-
-// IMPORTANT
-// usunąć slick .js, bo jest z linku
