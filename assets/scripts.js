@@ -69,6 +69,12 @@ $(document).ready(function(){
         settings: {
           slidesToShow: 3,
         }
+      },
+      {
+        breakpoint: 1001,
+        settings: {
+          slidesToShow: 1,
+        }
       }
     ]
   });
@@ -90,6 +96,17 @@ $(document).ready(function(){
         }
       }
     ]
+  });
+});
+
+$(document).ready(function(){
+  $('.pricing-slider').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    fade: false,
+    arrows: true,
+    autoplay: false,
+    autoplaySpeed: 500,
   });
 });
 
