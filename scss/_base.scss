@@ -58,7 +58,7 @@ html {
 body {
     background-color: $first;
     margin: 0;
-    line-height: 1.2;
+    line-height: 1.5;
 }
 
 h1, h2 {
@@ -85,7 +85,7 @@ h2.margined {
 }
 
 h2.second {
-    color: $second !important;
+    color: $third !important;
 }
 
 ul {
@@ -113,6 +113,10 @@ p {
     font-size: 1.7vw;
     margin-block-start: 0;
     margin-block-end: 0;
+}
+
+img {
+    display: block;
 }
 
 select, input, ::placeholder {
@@ -385,6 +389,25 @@ ul.slider {
         margin: 60px 0;
     }
 
+    .about-wrapper {
+        position: relative;
+        z-index: 1;
+        padding: 0 20px;
+
+        &::after {
+            position: absolute;
+            content: '';
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: $second;
+            opacity: 0.5;
+            border-radius: 10px;
+        }
+    }
+
     .values {
         width: 100%;
         background-color: $third;
@@ -412,27 +435,7 @@ ul.slider {
 
         a {
             margin: 0 10px;
-            line-height: 0;
-        }
-    }
-
-    .section {
-        &-container {
-            position: relative;
-            z-index: 1;
-            
-            &::after {
-                position: absolute;
-                content: '';
-                left: 0;
-                top: 0;
-                width: 100%;
-                height: 100%;
-                z-index: -1;
-                background: $second;
-                opacity: 0.5;
-                border-radius: 10px;
-            }
+            // line-height: 0;
         }
     }
 }
@@ -572,7 +575,7 @@ ul.slider {
                 &.names {
                     color: #160C0B;
                     font-size: 32px;
-                    line-height: 1.2;
+                    // line-height: 1.2;
                     font-weight: 500;
                     margin: 0 0 30px;
                 }
@@ -627,7 +630,7 @@ ul.slider {
                 color: $first;
                 text-align: center;
                 font-size: 40px;
-                line-height: 1.2;
+                // line-height: 1.2;
                 padding: 5px 0;
                 margin: 0 0 15px 0;
 
@@ -725,6 +728,47 @@ ul.slider {
             color: $first;
             font-size: 32px;
         }
+    }
+
+    &-slider {
+        display: none;
+        max-width: 380px;  
+        
+        .slick-prev, .slick-next {
+            width: 38px;
+            height: 53px;
+
+            &::before {
+                content: '';
+                display: block;
+                width: 38px;
+                height: 53px;
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+        }
+
+        .slick-prev {
+            left: -85px;
+
+            &::before {
+                background-image: url(../img/arrow-left.svg);
+            }
+        }
+
+        .slick-next {
+            right: -85px;
+
+            &::before {
+                background-image: url(../img/arrow-right.svg);
+            }
+        }
+    }
+
+    &-item.slick-slide {
+        height: 400px;
+        display: flex !important;
     }
 }
 
@@ -829,7 +873,7 @@ ul.slider {
             color: $first;
             text-align: center;
             display: inline-block;
-            translate: color 0.3s;
+            transition: color 0.3s;
 
             &:hover {
                 color: $third;
@@ -860,11 +904,11 @@ ul.slider {
             :is(p,a) {
                 color: $first;
                 font-size: 32px;
-                line-height: 38px;
+                // line-height: 38px;
             }
 
             a {
-                translate: color 0.3s;
+                transition: color 0.3s;
 
                 &:hover {
                     color: $third;
@@ -1022,7 +1066,7 @@ ul.slider {
         h4, p, a {
             text-align: center;
             font-size: 32px;
-            line-height: 1.2;
+            // line-height: 1.2;
             margin: 0;
         }
 
@@ -1153,7 +1197,7 @@ ul.slider {
             &-grid {
                 :is(p,a) {
                     font-size: 26px;
-                    line-height: 34px;
+                    // line-height: 34px;
                 }
             }
 
@@ -1294,7 +1338,7 @@ ul.slider {
         .content-grid {
             :is(p,a) {
                     font-size: 24px;
-                    line-height: 30px;
+                    // line-height: 30px;
             }
         }
     }
@@ -1399,7 +1443,7 @@ ul.slider {
         .content-grid {
             :is(p,a) {
                 font-size: 22px;
-                line-height: 26px;
+                // line-height: 26px;
             }
         }
 
@@ -1609,13 +1653,6 @@ ul.slider {
             width: 40%;
             z-index: -1;
         }
-
-        &-slider {
-            li {
-                height: 340px;
-                overflow: auto;
-            }
-        }
     }
 
     .section.about {
@@ -1643,6 +1680,7 @@ ul.slider {
 
             &-photo.scheduled {
                 width: 100%;
+                background-size: cover;
             }
         }
 
@@ -1658,6 +1696,8 @@ ul.slider {
 
         ul {
             li {
+                margin: 0;
+
                 .day {
                     &-lesson {
                         width: 50%;
@@ -1832,6 +1872,37 @@ ul.slider {
             }
         }
     }
+
+    .pricing {
+        &-wrapper {
+            display: none;
+        }
+
+        &-slider {
+            display: block;
+        }
+
+        &-item {
+
+            margin: 0 !important;
+            padding: 50px 25px;
+            justify-content: space-around;
+
+            &-title, &-cost {
+                width: 100%;
+            }
+
+            &-description {
+                width: 50%;
+            }
+
+            .register {
+                &-button {
+                    margin: 0 auto;
+                }
+            }
+        }
+    }
 }
 
 @media (max-width: 700px) {
@@ -1840,6 +1911,18 @@ ul.slider {
             img {
                 width: 180px;
             }
+        }
+    }
+
+    .section {
+        &-photo {
+            width: 100%;
+            background-size: contain;
+            background-position: right;
+        }
+
+        &-photo.two {
+            width: 50%;
         }
     }
 
@@ -1857,14 +1940,22 @@ ul.slider {
         }
     }
 
+    .section.about {
+        .values {
+            &-wrapper {
+                position: relative;
+            }
+        }
+    }
+
     .testimonials {
         &-slider {
             .slick-prev {
-                left: -75px;
+                left: -60px;
             }
 
             .slick-next {
-                right: -75px;
+                right: -60px;
             }
 
             li {
@@ -1874,5 +1965,415 @@ ul.slider {
                 }
             }
         }
+
+        &::after {
+            width: 50%;
+        }
+    }
+
+    .schedule {
+        &-slider {
+            .slick-next {
+                right: -60px;
+            }
+
+            .slick-prev {
+                left: -60px;
+            }
+        }
+    }
+
+    .pricing {
+        &-slider {
+            .slick-next {
+                right: -60px;
+            }
+
+            .slick-prev {
+                left: -60px;
+            }
+        }
+    }
+
+    .our-team {
+        .team {
+            &-slider {
+                &-wrapper {
+                    max-width: 450px;
+
+                    ul {
+                        .slick-prev {
+                            left: -50px;
+                        }
+
+                        .slick-next {
+                            right: -50px;
+                        }
+                    }
+                }
+
+                &-item {
+                    margin: 0 15px;
+                }
+            }
+        }
+    }
+
+    .contact-us {
+        .content {
+            &-grid {
+                :is(p,a) {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+
+    .footer {
+        &-wrapper {
+            :is(h4, p, a) {
+                font-size: 20px;
+            }
+        }
     }
 }
+
+@media (max-width: 600px) {
+
+    h2 {
+        font-size: 7.5vw;
+    }
+
+    .fullsized-photo {
+        width: 75%;
+        height: 50vh;
+        bottom: 0;
+        top: auto;
+    }
+
+    .central {
+        &-container {
+            transform: unset;
+            translate: -50% -50%;
+            height: 50vh;
+        }
+    }
+
+    .central {
+        &-container {
+            max-width: 100%;
+        }
+    }
+
+    .navigation {
+        height: 70px;
+
+        .register {
+            &-button {
+                position: fixed;
+                bottom: 0;
+                width: 100%;
+                left: 0;
+                border-radius: 0;
+                margin: 0;
+            }
+        }
+
+        &-scrolled {
+            .register {
+                &-button {
+                    background-color: $third;
+                    box-shadow: 0px 0 50px rgba(0,0,0,0.1);
+                }
+            }
+        }
+    }
+
+
+    .section {
+        &-photo {
+            width: 70%;
+            height: 55%;
+            bottom: auto;
+            top: 20%;
+        }
+
+        &-photo.two {
+            width: 100%;
+            height: 100%;
+            top: 0;
+            background-size: cover;
+        }
+
+        &-container {
+            max-width: 350px;
+        }
+    }
+
+    .section.about {
+        .values {
+            position: relative;
+
+            &-wrapper {
+                max-width: 350px;
+            }
+
+            &-single {
+                width: 48%;
+
+                p {
+                    font-size: 18px;
+                }
+
+                p:first-of-type {
+                    font-size: 60px;
+                }
+            }
+        }
+    }
+
+    .testimonials {
+        &::after {
+            width: 100%;
+        }
+    }
+
+    .schedule {
+        .section {
+            &-photo {
+                height: 100%;
+                top: 0;
+            }
+
+            &-container {
+                max-width: 350px;
+            }
+        }
+    }
+
+    .pricing {
+        &-slider {
+            max-width: 350px;
+        }
+    }
+
+    .our-team {
+        .team {
+            &-slider {
+                &-wrapper {
+                    max-width: 250px;
+                }
+            }
+        }
+    }
+
+    footer {
+        .first {
+            &-breakpoint {
+                &-in {
+                    display: none;
+                }
+
+                &-out {
+                    display: flex;
+                }
+            }
+        }
+
+        .footer {
+            &-top {
+                flex-wrap: wrap;
+
+                &-item {
+                    width: 50%;
+
+                    &:last-of-type {
+                        display: none;
+                    }
+                }
+            }
+
+            &-wrapper {
+
+                h4 {
+                    margin: 0;
+                }
+
+                .left {
+
+                    &:first-of-type {
+                        margin: 0 0 20px;
+                    }
+
+                    :is(h4,p,a) {
+                        text-align: left;
+                    }
+
+                    .footer-top-desc {
+                        align-items: flex-start;
+                    }
+                }
+
+                .right {
+
+                    &:first-of-type {
+                        margin: 0 0 20px;
+                    }
+
+                    :is(h4,p,a) {
+                        text-align: right;
+                    }
+
+                    .footer-top-desc {
+                        align-items: flex-end;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 500px) {
+
+    h1 {
+        font-size: 10vw;
+    }
+
+    .arrow {
+        &-scroll {
+            width: 42px;
+            height: 30px;
+        }
+    }
+
+    .section {
+        &-container {
+            max-width: 300px;
+
+            p {
+                font-size: 16px;
+            }
+        }
+    }
+
+    .section.about {
+        .social {
+            &-media {
+                margin: 30px 0 15px;
+            }
+        }
+
+        .values {
+            &-single {
+                width: 50%;
+            }
+        }
+    }
+
+    .testimonials {
+        &-slider {
+            .slick-prev, .slick-next {
+                width: 30px;
+                height: 40px;
+
+                &::before {
+                    width: 30px;
+                    height: 40px;
+                }
+            }
+        }
+    }
+
+    .schedule {
+        &-slider {
+            .slick-prev, .slick-next {
+                width: 30px;
+                height: 40px;
+    
+                &::before {
+                    width: 30px;
+                    height: 40px;
+                }
+            }
+        }
+
+        .section {
+            &-container {
+                max-width: 300px;
+            }
+        }
+        
+    }
+
+    .pricing {
+        &-slider {
+            max-width: 300px;
+
+            .slick-prev, .slick-next {
+                width: 30px;
+                height: 40px;
+    
+                &::before {
+                    width: 30px;
+                    height: 40px;
+                }
+            }
+        }
+
+        &-item {
+            &-description {
+                width: 100%;
+            }
+        }
+    }
+
+    .our-team {
+        .team {
+            &-slider {
+                &-wrapper {
+                    ul {
+                        .slick-prev, .slick-next {
+                            width: 30px;
+                            height: 40px;
+                
+                            &::before {
+                                width: 30px;
+                                height: 40px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .contact-us {
+        .content {
+            &-grid {
+                &-description {
+                    display: flex;
+                    align-items: flex-end;
+                    justify-content: flex-end;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+// Optymalizacja
+
+/*
+1. Cały setup strzałek w sliderze jako mixin SASS
+2. section.about
+*/
