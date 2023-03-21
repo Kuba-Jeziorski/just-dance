@@ -160,8 +160,8 @@ ul.slider {
   transition: background-color 0.3s linear; }
   #nav #menu-toggle {
     margin: 0 0 0 20px;
-    width: 45px;
-    height: 45px;
+    width: 55px;
+    height: 55px;
     border: 2px solid #B8A68E;
     border-radius: 5px;
     display: none; }
@@ -183,9 +183,6 @@ ul.slider {
     max-width: 1710px;
     margin: 0 auto;
     align-items: center; }
-    @media (max-width: 1750px) {
-      .navigation-wrapper {
-        max-width: 1450px; } }
   .navigation-logo img {
     width: 280px; }
   .navigation-menu {
@@ -1114,12 +1111,22 @@ ul.slider {
     margin: 0 15px; }
   .contact-us .content-grid :is(p, a) {
     font-size: 20px; }
+  .modal-wrapper {
+    max-width: 100%;
+    margin: 0 50px; }
+  .modal-image {
+    width: 100%;
+    background-size: cover; }
+  .modal #modal-validated {
+    padding: 0 20px; }
   .footer-wrapper :is(h4, p, a) {
     font-size: 20px; } }
 
 @media (max-width: 600px) {
   h2 {
     font-size: 7.5vw; }
+  select, input, ::placeholder {
+    font-size: 20px; }
   .fullsized-photo {
     width: 75%;
     height: 50vh;
@@ -1131,6 +1138,9 @@ ul.slider {
     height: 50vh; }
   .central-container {
     max-width: 100%; }
+  #nav #menu-toggle {
+    width: 30px;
+    height: 30px; }
   .navigation {
     height: 70px; }
     .navigation .register-button {
@@ -1204,6 +1214,13 @@ ul.slider {
 @media (max-width: 500px) {
   h1 {
     font-size: 10vw; }
+  select, input, ::placeholder {
+    font-size: 18px; }
+  input[type="submit"] {
+    width: 80%;
+    height: 50px; }
+  p.central {
+    font-size: 22px; }
   .arrow-scroll {
     width: 42px;
     height: 30px; }
@@ -1249,7 +1266,101 @@ ul.slider {
   .contact-us .content-grid-description {
     display: flex;
     align-items: flex-end;
-    justify-content: flex-end; } }
+    justify-content: flex-end; }
+  .modal-content {
+    padding: 30px; } }
+
+@media (max-width: 450px) {
+  h1 {
+    font-size: 50px; }
+  h2 {
+    font-size: 45px; }
+  .social-media img {
+    width: 40px; }
+  .testimonials-slider .slick-prev {
+    left: -40px; }
+  .testimonials-slider .slick-next {
+    right: -40px; }
+  .schedule-slider .slick-next {
+    right: -40px; }
+  .schedule-slider .slick-prev {
+    left: -40px; }
+  .pricing-slider .slick-next {
+    right: -40px; }
+  .pricing-slider .slick-prev {
+    left: -40px; }
+  .pricing-item .register-button {
+    width: 150px;
+    font-size: 18px; }
+  .contact-us .content-grid {
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 0; }
+    .contact-us .content-grid-description {
+      align-items: center;
+      justify-content: center; }
+    .contact-us .content-grid :is(p, a) {
+      text-align: center; }
+    .contact-us .content-grid p.enhanced:not(:first-of-type) {
+      margin: 20px 0 0; }
+  footer .first-breakpoint-out {
+    display: none; }
+  footer .first-breakpoint-in {
+    display: flex; }
+  footer .footer-top-item {
+    width: 100%; }
+  footer .footer-top-title.first-breakpoint-in {
+    margin: 20px 0 0; }
+  footer .footer-wrapper .left :is(h4, p, a), footer .footer-wrapper .right :is(h4, p, a) {
+    text-align: center; }
+  footer .footer-wrapper .left .footer-top-desc, footer .footer-wrapper .right .footer-top-desc {
+    align-items: center; }
+  footer .footer-bottom-logo {
+    max-width: unset; }
+    footer .footer-bottom-logo img {
+      margin: 0 auto; } }
+
+@media (max-width: 400px) {
+  h2 {
+    font-size: 40px; }
+  select, input, ::placeholder {
+    font-size: 16px; }
+  .slick-prev, .slick-next {
+    top: auto !important;
+    bottom: -80px; }
+  .slick-prev {
+    left: 30% !important; }
+  .slick-next {
+    right: 30% !important; }
+  .schedule .register-button {
+    margin: 80px 0 35px; }
+  .schedule-slider li p {
+    font-size: 20px; }
+  .our-team .team-contact {
+    margin: 80px 0 20px; }
+  .our-team .team-slider-name {
+    font-size: 22px; } }
+
+@media (max-width: 375px) {
+  .section.about .values-wrapper {
+    max-width: 100%;
+    padding: 20px 50px; }
+  .section.about .values-single p {
+    font-size: 14px; }
+    .section.about .values-single p:first-of-type {
+      font-size: 55px; }
+  .pricing-item {
+    padding: 25px; }
+  .our-team .team-contact {
+    width: 100%;
+    padding: 0 50px; } }
+
+@media (max-width: 320px) {
+  h1 {
+    font-size: 45px; }
+  h2 {
+    font-size: 32px; }
+  p.central {
+    font-size: 20px; } }
 
 /*
 1. Cały setup strzałek w sliderze jako mixin SASS

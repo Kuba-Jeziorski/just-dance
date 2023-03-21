@@ -215,8 +215,8 @@ ul.slider {
 
     #menu-toggle {
         margin: 0 0 0 20px;
-        width: 45px;
-        height: 45px;
+        width: 55px;
+        height: 55px;
         border: 2px solid $third;
         border-radius: 5px;
         display: none;
@@ -246,10 +246,6 @@ ul.slider {
         max-width: 1710px;
         margin: 0 auto;
         align-items: center;
-
-        @media (max-width: 1750px) {
-            max-width: 1450px;
-        }
     }
 
     &-logo {
@@ -2029,6 +2025,22 @@ ul.slider {
         }
     }
 
+    .modal {
+        &-wrapper {
+            max-width: 100%;
+            margin: 0 50px;
+        }
+
+        &-image {
+            width: 100%;
+            background-size: cover;
+        }
+
+        #modal-validated {
+            padding: 0 20px;
+        }
+    }
+
     .footer {
         &-wrapper {
             :is(h4, p, a) {
@@ -2042,6 +2054,10 @@ ul.slider {
 
     h2 {
         font-size: 7.5vw;
+    }
+
+    select, input, ::placeholder {
+        font-size: 20px;
     }
 
     .fullsized-photo {
@@ -2062,6 +2078,13 @@ ul.slider {
     .central {
         &-container {
             max-width: 100%;
+        }
+    }
+
+    #nav {
+        #menu-toggle {
+            width: 30px;
+            height: 30px;
         }
     }
 
@@ -2239,6 +2262,19 @@ ul.slider {
         font-size: 10vw;
     }
 
+    select, input, ::placeholder {
+        font-size: 18px;
+    }
+
+    input[type="submit"] {
+        width: 80%;
+        height: 50px;
+    }
+
+    p.central {
+        font-size: 22px;
+    }
+
     .arrow {
         &-scroll {
             width: 42px;
@@ -2358,7 +2394,257 @@ ul.slider {
             }
         }
     }
+
+    .modal {
+        &-content {
+            padding: 30px;
+        }
+    }
 }
+
+@media (max-width: 450px) {
+    
+    h1 {
+        font-size: 50px;
+    }
+
+    h2 {
+        font-size: 45px;
+    }
+    
+    .social {
+        &-media {
+            img {
+                width: 40px;
+            }
+        }
+    }
+
+    .testimonials {
+        &-slider {
+            .slick-prev {
+                left: -40px;
+            }
+
+            .slick-next {
+                right: -40px;
+            }
+        }
+    }
+
+    .schedule {
+        &-slider {
+            .slick-next {
+                right: -40px;
+            }
+
+            .slick-prev {
+                left: -40px;
+            }
+        }
+    }
+
+    .pricing {
+        &-slider {
+            .slick-next {
+                right: -40px;
+            }
+
+            .slick-prev {
+                left: -40px;
+            }
+        }
+
+        &-item {
+            .register {
+                &-button {
+                    width: 150px;
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+
+    .contact-us {
+        .content {
+            &-grid {
+                grid-template-columns: repeat(1, 1fr);
+                row-gap: 0;
+
+                &-description {
+                    align-items: center;
+                    justify-content: center;
+                }
+
+                :is(p,a) {
+                    text-align: center;
+                }
+
+                p.enhanced {
+                    &:not(:first-of-type) {
+                        margin: 20px 0 0;
+                    }
+                }
+            }
+        }
+    }
+
+    footer {
+        .first-breakpoint {
+            &-out {
+                display: none;
+            }
+
+            &-in {
+                display: flex;
+            }
+        }
+
+        .footer {
+            &-top {
+                &-item {
+                    width: 100%;
+                }
+
+                &-title.first-breakpoint-in {
+                    margin: 20px 0 0;
+                }
+            }
+
+            &-wrapper {
+                .left, .right {
+                    :is(h4,p,a) {
+                        text-align: center;
+                    }
+
+                    .footer {
+                        &-top {
+                            &-desc {
+                                align-items: center;
+                            }
+                        }
+                    }
+                }
+            }
+
+            &-bottom-logo {
+                max-width: unset;
+
+                img {
+                    margin: 0 auto;
+                }
+            }
+        }
+    }
+
+}
+
+@media (max-width: 400px) {
+
+    h2 {
+        font-size: 40px;
+    }
+
+    select, input, ::placeholder {
+        font-size: 16px;
+    }
+
+    .slick-prev, .slick-next {
+        top: auto !important;
+        bottom: -80px;
+    }
+
+    .slick-prev {
+        left: 30% !important;
+    }
+
+    .slick-next {
+        right: 30% !important;
+    }
+
+    .schedule {
+        .register-button {
+            margin: 80px 0 35px;
+        }
+
+        &-slider {
+            li {
+                p {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+
+    .our-team {
+        .team {
+            &-contact {
+                margin: 80px 0 20px;
+            }
+
+            &-slider {
+                &-name {
+                    font-size: 22px;
+                }
+            }
+        }
+    }
+
+}
+
+@media (max-width: 375px) {
+
+    .section.about {
+        .values {
+            &-wrapper {
+                max-width: 100%;
+                padding: 20px 50px;
+            }
+
+            &-single {
+                p {
+                    font-size: 14px;
+
+                    &:first-of-type {
+                        font-size: 55px;
+                    }
+                }
+            }
+        }
+    }
+
+    .pricing {
+        &-item {
+            padding: 25px;
+        }
+    }
+
+    .our-team {
+        .team {
+            &-contact {
+                width: 100%;
+                padding: 0 50px;
+            }
+        }
+    }
+}
+
+@media (max-width: 320px) {
+
+    h1 {
+        font-size: 45px;
+    }
+
+    h2 {
+        font-size: 32px;
+    }
+
+    p.central {
+        font-size: 20px;
+    }
+
+}
+
 
 
 
