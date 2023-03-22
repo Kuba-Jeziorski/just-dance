@@ -240,3 +240,20 @@ modal();
 
   });
 })();
+
+
+// IMPORTANT Hiding toggle while pressing navigation item
+(function() {
+  const menuToggle = document.querySelector('#menu-toggle');
+  const checkbox = document.querySelector('#menu-toggle-checkbox')
+  
+  menuToggle.addEventListener('click', function(event) {
+    let target = event.target;
+    if (target.tagName != 'A') return;
+    checkbox.checked = !checkbox.checked;
+  })
+})();
+
+
+
+

@@ -217,17 +217,107 @@ ul.slider {
         margin: 0 0 0 20px;
         width: 55px;
         height: 55px;
-        border: 2px solid $third;
         border-radius: 5px;
         display: none;
+        position: relative;
+
+        &-bg {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background: $first;
+            width: 100%;
+            height: 100vh;
+            z-index: 0;
+
+            ul {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                translate: -50% -50%;
+
+                li {
+                    font-size: 35px;
+
+                    &:not(:last-of-type) {
+                        margin: 0 0 20px;
+
+                        a:hover {
+                            color: $third;
+                        }
+                    }
+                }
+            }
+        }
+
+        input {
+            margin: 0;
+            padding: 0;
+            border: none;
+            width: 55px;
+            min-height: 53px;
+            appearance: none;
+            background: transparent;
+            cursor: pointer;
+            z-index: 2;
+
+            &:not(:checked) ~ span {
+                transition: all 0.5s ease-in-out;
+            }
+
+            &:checked ~ span {
+                rotate: 0;
+                transition: rotate 0.5s;
+
+                &:first-of-type {
+                    rotate: 45deg;
+                    transform-origin: 5px 0;
+                }
+
+                &:nth-of-type(2) {
+                    opacity: 0;
+                }
+
+                &:last-of-type {
+                    rotate: -45deg;
+                    transform-origin: -2px 0;
+                }
+            }
+
+            &:checked ~ div {
+                display: block;
+            }
+
+        }
+
+        span {
+            display: block;
+            position: relative;
+            z-index: 1;
+            top: -28px;
+            left: 50%;
+            translate: -50% 0;
+            width: 44px;
+            min-height: 2px;
+            background: $third;
+
+            &:first-of-type {
+                top: -40px;
+            }
+
+            &:last-of-type {
+                top:-15px;
+            }
+        }
     }
 
     &.navigation-scrolled {
         background-color: $third;
         box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.3);
 
-        #menu-toggle {
-            border: 2px solid $second;
+        span {
+            background: $second !important;
         }
     }
 }
@@ -257,6 +347,10 @@ ul.slider {
 
     &-menu {
         align-items: center;
+
+        a.active {
+            color: $first !important;
+        }
     }
 
     &-menu li:not(:last-of-type, :first-of-type) {
@@ -289,10 +383,6 @@ ul.slider {
                 color: $first;
             }
         }
-    }
-
-    a.active {
-        color: $first !important;
     }
 }
 
@@ -1560,7 +1650,7 @@ ul.slider {
         }
     
         #menu-toggle {
-            display: block;
+            display: flex;
         }
     }
 
@@ -2085,6 +2175,32 @@ ul.slider {
         #menu-toggle {
             width: 30px;
             height: 30px;
+
+            input {
+                width: 30px;
+                min-height: 30px;
+            }
+
+            span {
+                width: 30px;
+                top: -17px;
+
+                &:first-of-type {
+                    top: -25px;
+                }
+
+                &:last-of-type {
+                    top: -10px;
+                }
+            }
+
+            &-bg {
+                ul {
+                    li {
+                      font-size: 30px;  
+                    }
+                }
+            }
         }
     }
 
@@ -2547,6 +2663,18 @@ ul.slider {
 
     select, input, ::placeholder {
         font-size: 16px;
+    }
+
+    #nav {
+        #menu-toggle {
+            &-bg {
+                ul {
+                    li {
+                      font-size: 25px;  
+                    }
+                }
+            }
+        }
     }
 
     .slick-prev, .slick-next {
