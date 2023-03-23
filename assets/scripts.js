@@ -218,7 +218,6 @@ const modal = function() {
   modalClose.addEventListener('click', closingModal);
   document.addEventListener('keydown', closingModalEscape);
 }
-
 modal();
 
 (function() {
@@ -255,5 +254,26 @@ modal();
 })();
 
 
+// IMPORTANT Leaflet map
+(function() {
+  var map = L.map('map').setView([40.718821593848624, -73.89191503044998], 20);
 
-
+   L.tileLayer('https://{s}.tile.jawg.io/jawg-streets/{z}/{x}/{y}{r}.png?access-token={accessToken}', {
+    	attribution: '<a href="http://jawg.io" title="Tiles Courtesy of Jawg Maps" target="_blank">&copy; <b>Jawg</b>Maps</a> &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+    	minZoom: 0,
+    	maxZoom: 19,
+    	subdomains: 'abcd',
+    	accessToken: 'n6o3WRNXeVN1r7xJClnhLEpHtNp1sY8KNTyzmj6qTg6haabGelPxmiHbesv4byCq'
+    }).addTo(map);
+  
+  var greenIcon = L.icon({
+    iconUrl: '../img/marker.svg',
+    iconSize:     [38, 95], // size of the icon
+    shadowSize:   [50, 64], // size of the shadow
+    iconAnchor:   [22, 94], // point of the icon which will correspond to marker's location
+    shadowAnchor: [4, 62],  // the same for the shadow
+    popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
+  });
+  
+  L.marker([40.718821593848624, -73.89191503044998], {icon: greenIcon}).addTo(map);
+})();
