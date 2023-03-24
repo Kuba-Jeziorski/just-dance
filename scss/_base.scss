@@ -82,19 +82,17 @@ body {
 
 h1,
 h2 {
-  margin-block-start: 0em;
-  margin-block-end: 0em;
+  @include defaultFonts;
   font-weight: 400;
+  font-family: "Limelight";
 }
 
 h1 {
-  font-family: "Limelight";
   color: $third;
   font-size: 5.1vw;
 }
 
 h2 {
-  font-family: "Limelight";
   color: $first;
   font-size: 4.2vw;
 }
@@ -109,9 +107,7 @@ h2.second {
 
 ul {
   list-style: none;
-  margin-block-start: 0;
-  margin-block-end: 0;
-  padding-inline-start: 0;
+  @include defaultFonts;
 }
 
 li {
@@ -130,8 +126,7 @@ a {
 
 p {
   font-size: 1.7vw;
-  margin-block-start: 0;
-  margin-block-end: 0;
+  @include defaultFonts;
 }
 
 img {
@@ -164,13 +159,13 @@ select {
 
 option {
   color: $first;
-  padding: 0 65px 0 0;
+  // padding: 0 65px 0 0;
   background: $third;
 }
 
 input {
   margin: 15px 0 0;
-  padding: 16px 65px 16px 10px;
+  padding: 15px;
 
   &:focus {
     outline: transparent;
@@ -194,29 +189,32 @@ footer {
 .flex {
   display: flex;
 
-  &-b {
+  &-b,
+  &-c,
+  &-col,
+  &-nw,
+  &-w {
     @extend .flex;
+  }
+
+  &-b {
     justify-content: space-between;
   }
 
   &-c {
-    @extend .flex;
     justify-content: center;
     align-items: center;
   }
 
   &-col {
-    @extend .flex;
     flex-direction: column;
   }
 
   &-nw {
-    @extend .flex;
     flex-wrap: nowrap;
   }
 
   &-w {
-    @extend .flex;
     flex-wrap: wrap;
   }
 }
@@ -243,13 +241,15 @@ ul.slider {
     position: relative;
 
     &-bg {
+      @include fullerSize;
+      @include topLeftCorner;
       display: none;
       position: fixed;
-      top: 0;
-      left: 0;
+      // top: 0;
+      // left: 0;
       background: $first;
-      width: 100%;
-      height: 100vh;
+      // width: 100%;
+      // height: 100vh;
       z-index: 0;
 
       ul {
@@ -333,8 +333,9 @@ ul.slider {
   }
 
   &.navigation-scrolled {
-    background-color: $third;
-    box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.3);
+    @include thirdBoxshadow;
+    // background-color: $third;
+    // box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.3);
 
     span {
       background: $second !important;
@@ -343,12 +344,13 @@ ul.slider {
 }
 
 .navigation {
+  @include topLeftCorner;
   width: 100%;
   height: 135px;
   position: fixed;
   z-index: 9999;
-  top: 0;
-  left: 0;
+  // top: 0;
+  // left: 0;
 
   &-wrapper {
     height: 100%;
@@ -430,9 +432,10 @@ ul.slider {
   position: relative;
 
   &-photo {
+    @include bottomRightCorner;
     position: absolute;
-    right: 0;
-    bottom: 0;
+    // right: 0;
+    // bottom: 0;
     width: 20%;
     height: 100%;
     mix-blend-mode: multiply;
@@ -466,8 +469,8 @@ ul.slider {
   }
 
   &-container {
-    max-width: 900px;
     @include fullSize;
+    max-width: 900px;
 
     p,
     h2 {
@@ -499,12 +502,14 @@ ul.slider {
     padding: 0 20px;
 
     &::after {
+      @include fullSize;
+      @include topLeftCorner;
       position: absolute;
       content: "";
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
+      // left: 0;
+      // top: 0;
+      // width: 100%;
+      // height: 100%;
       z-index: -1;
       background: $second;
       opacity: 0.5;
@@ -556,17 +561,20 @@ ul.slider {
 }
 
 .fullsized-section {
+  @include fullerSize;
   position: relative;
-  height: 100vh;
-  width: 100%;
+  // height: 100vh;
+  // width: 100%;
 }
 
 .fullsized-photo {
+  @include fullerSize;
+  @include topLeftCorner;
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
+  // top: 0;
+  // left: 0;
+  // width: 100%;
+  // height: 100vh;
   background-size: contain;
   background-repeat: no-repeat;
   mix-blend-mode: lighten;
@@ -576,8 +584,9 @@ ul.slider {
   position: absolute;
   padding: 0 0 20px 0;
   left: 50%;
-  transform: translateX(-50%);
+  // transform: translateX(-50%);
   bottom: 0;
+  translate: -50% 0;
   max-width: 750px;
   width: 100%;
   height: 65vh;
@@ -600,13 +609,15 @@ ul.slider {
   cursor: pointer;
 
   &::after {
+    @include fullSize;
     position: absolute;
     content: "";
     top: 30%;
     left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-    height: 100%;
+    // transform: translate(-50%, -50%);
+    translate: -50% -50%;
+    // width: 100%;
+    // height: 100%;
     background-image: url(../img/arrow-down.svg);
     background-size: cover;
     background-repeat: no-repeat;
@@ -627,10 +638,11 @@ ul.slider {
   position: relative;
 
   &::after {
+    @include topLeftCorner;
     position: absolute;
     content: "";
-    top: 0;
-    left: 0;
+    // top: 0;
+    // left: 0;
     width: 27%;
     height: 100%;
     background: linear-gradient(
@@ -715,7 +727,7 @@ ul.slider {
   background-color: $second;
 
   .section {
-    height: 100%;
+    // height: 100%;
 
     &-container {
       max-width: 1500px;
@@ -729,9 +741,10 @@ ul.slider {
     width: 100%;
 
     .slick-track {
+      @extend .flex-b;
       width: 100%;
-      display: flex;
-      justify-content: space-between;
+      // display: flex;
+      // justify-content: space-between;
     }
 
     li {
@@ -799,7 +812,7 @@ ul.slider {
   }
 
   .section {
-    height: 100%;
+    // height: 100%;
 
     &-container {
       max-width: 1300px;
@@ -916,16 +929,18 @@ ul.slider {
     }
 
     .slick-prev:before {
+      @include fullSize;
       background-image: url(../img/arrow-left-black.svg);
       background-size: cover;
       background-repeat: no-repeat;
-      width: 100%;
-      height: 100%;
+      // width: 100%;
+      // height: 100%;
       position: absolute;
       content: "";
       top: 50%;
       left: 50%;
-      transform: translate(-50%, -50%);
+      // transform: translate(-50%, -50%);
+      translate: -50% -50%;
     }
 
     .slick-next:before {
@@ -1072,10 +1087,11 @@ ul.slider {
 
 .modal {
   @include fullSize;
+  @include topLeftCorner;
   position: fixed;
   z-index: 10000;
-  top: 0;
-  left: 0;
+  // top: 0;
+  // left: 0;
   background-color: rgba(0, 0, 0, 0.5);
   display: none;
 
@@ -1134,6 +1150,7 @@ ul.slider {
   }
 
   &-image {
+    @include bottomRightCorner;
     width: 70%;
     height: 100%;
     position: absolute;
@@ -1141,8 +1158,8 @@ ul.slider {
     background-position: right;
     background-size: 100%;
     z-index: 4;
-    right: 0;
-    bottom: 0;
+    // right: 0;
+    // bottom: 0;
   }
 
   &-inner {
@@ -1170,11 +1187,12 @@ ul.slider {
 
   #modal-validated {
     @include fullSize;
+    @include topLeftCorner;
     background: $second;
     position: absolute;
     z-index: 3;
-    top: 0;
-    left: 0;
+    // top: 0;
+    // left: 0;
     display: none;
   }
 }
@@ -2280,8 +2298,9 @@ ul.slider {
     &-scrolled {
       .register {
         &-button {
-          background-color: $third;
-          box-shadow: 0px 0 50px rgba(0, 0, 0, 0.1);
+          @include thirdBoxshadow;
+          // background-color: $third;
+          // box-shadow: 0px 0 50px rgba(0, 0, 0, 0.1);
         }
       }
     }
@@ -2296,8 +2315,9 @@ ul.slider {
     }
 
     &-photo.two {
-      width: 100%;
-      height: 100%;
+      @include fullSize;
+      // width: 100%;
+      // height: 100%;
       top: 0;
       background-size: cover;
     }
