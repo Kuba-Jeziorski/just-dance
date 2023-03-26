@@ -28,3 +28,31 @@
   bottom: 0;
   right: 0;
 }
+
+@mixin slicksSize {
+  width: 38px;
+  height: 53px;
+}
+
+@mixin slickSizeSmall {
+  width: 30px;
+  height: 40px;
+}
+
+@mixin backgroundSetup {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+@mixin backgroundContainSetup {
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+@mixin backgroundRightSetup {
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: cover;
+}

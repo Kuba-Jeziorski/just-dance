@@ -3,64 +3,6 @@ Author: Kuba-Jeziorski
 Github: https://github.com/Kuba-Jeziorski
 */
 
-/* limelight-regular - latin */
-@font-face {
-  font-family: "Limelight";
-  font-style: normal;
-  font-weight: 400;
-  src: url("../fonts/limelight-v16-latin-regular.eot"); /* IE9 Compat Modes */
-  src: local(""),
-    url("../fonts/limelight-v16-latin-regular.eot?#iefix")
-      format("embedded-opentype"),
-    /* IE6-IE8 */ url("../fonts/limelight-v16-latin-regular.woff2")
-      format("woff2"),
-    /* Super Modern Browsers */ url("../fonts/limelight-v16-latin-regular.woff")
-      format("woff"),
-    /* Modern Browsers */ url("../fonts/limelight-v16-latin-regular.ttf")
-      format("truetype"),
-    /* Safari, Android, iOS */
-      url("../fonts/limelight-v16-latin-regular.svg#Limelight") format("svg"); /* Legacy iOS */
-}
-
-/* roboto-condensed-regular - latin */
-@font-face {
-  font-family: "Roboto Condensed";
-  font-style: normal;
-  font-weight: 400;
-  src: url("../fonts/roboto-condensed-v25-latin-regular.eot"); /* IE9 Compat Modes */
-  src: local(""),
-    url("../fonts/roboto-condensed-v25-latin-regular.eot?#iefix")
-      format("embedded-opentype"),
-    /* IE6-IE8 */ url("../fonts/roboto-condensed-v25-latin-regular.woff2")
-      format("woff2"),
-    /* Super Modern Browsers */
-      url("../fonts/roboto-condensed-v25-latin-regular.woff") format("woff"),
-    /* Modern Browsers */ url("../fonts/roboto-condensed-v25-latin-regular.ttf")
-      format("truetype"),
-    /* Safari, Android, iOS */
-      url("../fonts/roboto-condensed-v25-latin-regular.svg#RobotoCondensed")
-      format("svg"); /* Legacy iOS */
-}
-/* roboto-condensed-700 - latin */
-@font-face {
-  font-family: "Roboto Condensed";
-  font-style: normal;
-  font-weight: 700;
-  src: url("../fonts/roboto-condensed-v25-latin-700.eot"); /* IE9 Compat Modes */
-  src: local(""),
-    url("../fonts/roboto-condensed-v25-latin-700.eot?#iefix")
-      format("embedded-opentype"),
-    /* IE6-IE8 */ url("../fonts/roboto-condensed-v25-latin-700.woff2")
-      format("woff2"),
-    /* Super Modern Browsers */
-      url("../fonts/roboto-condensed-v25-latin-700.woff") format("woff"),
-    /* Modern Browsers */ url("../fonts/roboto-condensed-v25-latin-700.ttf")
-      format("truetype"),
-    /* Safari, Android, iOS */
-      url("../fonts/roboto-condensed-v25-latin-700.svg#RobotoCondensed")
-      format("svg"); /* Legacy iOS */
-}
-
 * {
   box-sizing: border-box;
   font-family: "Roboto Condensed", sans-serif;
@@ -151,15 +93,14 @@ input {
 select {
   width: 100%;
   padding: 16px 0 16px 10px;
-  appearance: none;
   position: relative;
   z-index: 2;
+  appearance: none;
   outline: transparent;
 }
 
 option {
   color: $first;
-  // padding: 0 65px 0 0;
   background: $third;
 }
 
@@ -173,10 +114,10 @@ input {
 }
 
 input[type="submit"] {
-  margin: 40px auto 0;
-  padding: 0;
   width: 300px;
   height: 64px;
+  margin: 40px auto 0;
+  padding: 0;
   background: $third;
   color: $first;
   text-align: center;
@@ -245,11 +186,7 @@ ul.slider {
       @include topLeftCorner;
       display: none;
       position: fixed;
-      // top: 0;
-      // left: 0;
       background: $first;
-      // width: 100%;
-      // height: 100vh;
       z-index: 0;
 
       ul {
@@ -334,8 +271,6 @@ ul.slider {
 
   &.navigation-scrolled {
     @include thirdBoxshadow;
-    // background-color: $third;
-    // box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.3);
 
     span {
       background: $second !important;
@@ -349,8 +284,6 @@ ul.slider {
   height: 135px;
   position: fixed;
   z-index: 9999;
-  // top: 0;
-  // left: 0;
 
   &-wrapper {
     height: 100%;
@@ -434,8 +367,6 @@ ul.slider {
   &-photo {
     @include bottomRightCorner;
     position: absolute;
-    // right: 0;
-    // bottom: 0;
     width: 20%;
     height: 100%;
     mix-blend-mode: multiply;
@@ -488,7 +419,7 @@ ul.slider {
   }
 }
 
-.section.about {
+.about {
   padding: 65px 0 0;
   background-color: $second;
 
@@ -496,7 +427,7 @@ ul.slider {
     margin: 60px 0;
   }
 
-  .about-wrapper {
+  &-wrapper {
     position: relative;
     z-index: 1;
     padding: 0 20px;
@@ -506,10 +437,6 @@ ul.slider {
       @include topLeftCorner;
       position: absolute;
       content: "";
-      // left: 0;
-      // top: 0;
-      // width: 100%;
-      // height: 100%;
       z-index: -1;
       background: $second;
       opacity: 0.5;
@@ -517,7 +444,7 @@ ul.slider {
     }
   }
 
-  .values {
+  &-values {
     width: 100%;
     background-color: $third;
 
@@ -563,18 +490,12 @@ ul.slider {
 .fullsized-section {
   @include fullerSize;
   position: relative;
-  // height: 100vh;
-  // width: 100%;
 }
 
 .fullsized-photo {
   @include fullerSize;
   @include topLeftCorner;
   position: absolute;
-  // top: 0;
-  // left: 0;
-  // width: 100%;
-  // height: 100vh;
   background-size: contain;
   background-repeat: no-repeat;
   mix-blend-mode: lighten;
@@ -584,7 +505,6 @@ ul.slider {
   position: absolute;
   padding: 0 0 20px 0;
   left: 50%;
-  // transform: translateX(-50%);
   bottom: 0;
   translate: -50% 0;
   max-width: 750px;
@@ -614,10 +534,7 @@ ul.slider {
     content: "";
     top: 30%;
     left: 50%;
-    // transform: translate(-50%, -50%);
     translate: -50% -50%;
-    // width: 100%;
-    // height: 100%;
     background-image: url(../img/arrow-down.svg);
     background-size: cover;
     background-repeat: no-repeat;
@@ -641,8 +558,6 @@ ul.slider {
     @include topLeftCorner;
     position: absolute;
     content: "";
-    // top: 0;
-    // left: 0;
     width: 27%;
     height: 100%;
     background: linear-gradient(
@@ -667,27 +582,23 @@ ul.slider {
 
     .slick-prev,
     .slick-next {
-      width: 38px;
-      height: 53px;
+      @include slicksSize;
     }
 
     .slick-prev {
-      left: -118px;
+      left: slickX(1);
     }
 
     .slick-next {
-      right: -118px;
+      right: slickX(1);
     }
 
     .slick-prev:before,
     .slick-next:before {
+      @include slicksSize;
+      @include backgroundSetup;
       content: "";
       display: block;
-      width: 38px;
-      height: 53px;
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
     }
 
     .slick-prev:before {
@@ -709,7 +620,6 @@ ul.slider {
         &.names {
           color: #160c0b;
           font-size: 32px;
-          // line-height: 1.2;
           font-weight: 500;
           margin: 0 0 30px;
         }
@@ -727,8 +637,6 @@ ul.slider {
   background-color: $second;
 
   .section {
-    // height: 100%;
-
     &-container {
       max-width: 1500px;
       margin: 0 auto;
@@ -743,8 +651,6 @@ ul.slider {
     .slick-track {
       @extend .flex-b;
       width: 100%;
-      // display: flex;
-      // justify-content: space-between;
     }
 
     li {
@@ -763,7 +669,6 @@ ul.slider {
         color: $first;
         text-align: center;
         font-size: 40px;
-        // line-height: 1.2;
         padding: 5px 0;
         margin: 0 0 15px 0;
 
@@ -812,8 +717,6 @@ ul.slider {
   }
 
   .section {
-    // height: 100%;
-
     &-container {
       max-width: 1300px;
       margin: 0 auto;
@@ -867,22 +770,18 @@ ul.slider {
 
     .slick-prev,
     .slick-next {
-      width: 38px;
-      height: 53px;
+      @include slicksSize;
 
       &::before {
+        @include slicksSize;
+        @include backgroundSetup;
         content: "";
         display: block;
-        width: 38px;
-        height: 53px;
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
       }
     }
 
     .slick-prev {
-      left: -85px;
+      left: slickX(3);
 
       &::before {
         background-image: url(../img/arrow-left.svg);
@@ -890,7 +789,7 @@ ul.slider {
     }
 
     .slick-next {
-      right: -85px;
+      right: slickX(3);
 
       &::before {
         background-image: url(../img/arrow-right.svg);
@@ -915,45 +814,38 @@ ul.slider {
 
     .slick-prev,
     .slick-next {
-      width: 38px;
-      height: 53px;
+      @include slicksSize;
       top: 30%;
     }
 
     .slick-prev {
-      left: -80px;
+      left: slickX(4);
     }
 
     .slick-next {
-      right: -80px;
+      right: slickX(4);
     }
 
     .slick-prev:before {
       @include fullSize;
+      @include backgroundSetup;
       background-image: url(../img/arrow-left-black.svg);
-      background-size: cover;
-      background-repeat: no-repeat;
-      // width: 100%;
-      // height: 100%;
       position: absolute;
       content: "";
       top: 50%;
       left: 50%;
-      // transform: translate(-50%, -50%);
       translate: -50% -50%;
     }
 
     .slick-next:before {
+      @include fullSize;
+      @include backgroundSetup;
       background-image: url(../img/arrow-right-black.svg);
-      background-size: cover;
-      background-repeat: no-repeat;
-      width: 100%;
-      height: 100%;
       position: absolute;
       content: "";
       top: 50%;
       left: 50%;
-      transform: translate(-50%, -50%);
+      translate: -50% -50%;
     }
   }
 
@@ -976,11 +868,9 @@ ul.slider {
       margin: 0 20px;
     }
     &-img {
+      @include backgroundSetup;
       width: 100%;
       padding: 100% 0 0 0;
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: center;
     }
     &-name {
       color: $first;
@@ -1036,7 +926,6 @@ ul.slider {
       :is(p, a) {
         color: $first;
         font-size: 32px;
-        // line-height: 38px;
       }
 
       a {
@@ -1078,11 +967,6 @@ ul.slider {
     border-bottom: 1px solid $first;
     color: $first;
   }
-
-  #map {
-    display: flex;
-    align-items: center;
-  }
 }
 
 .modal {
@@ -1090,8 +974,6 @@ ul.slider {
   @include topLeftCorner;
   position: fixed;
   z-index: 10000;
-  // top: 0;
-  // left: 0;
   background-color: rgba(0, 0, 0, 0.5);
   display: none;
 
@@ -1113,6 +995,7 @@ ul.slider {
       width: 100%;
 
       &::after {
+        @include backgroundContainSetup;
         content: "";
         position: absolute;
         right: 20px;
@@ -1121,8 +1004,6 @@ ul.slider {
         height: 20px;
         background-image: url(../img/arrow-down.svg);
         background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center;
         z-index: 1;
       }
     }
@@ -1133,17 +1014,16 @@ ul.slider {
     top: -30px;
     right: 0;
     width: 20px;
-    height: 20px;
+    aspect-ratio: 1;
     cursor: pointer;
 
     &::after {
+      @include backgroundSetup;
       position: absolute;
       content: "";
       background-image: url(../img/close.svg);
-      background-size: cover;
-      background-repeat: no-repeat;
       width: 20px;
-      height: 20px;
+      aspect-ratio: 1;
       top: -1px;
       right: -1px;
     }
@@ -1151,15 +1031,11 @@ ul.slider {
 
   &-image {
     @include bottomRightCorner;
+    @include backgroundRightSetup;
     width: 70%;
     height: 100%;
     position: absolute;
-    background-repeat: no-repeat;
-    background-position: right;
-    background-size: 100%;
     z-index: 4;
-    // right: 0;
-    // bottom: 0;
   }
 
   &-inner {
@@ -1191,8 +1067,6 @@ ul.slider {
     background: $second;
     position: absolute;
     z-index: 3;
-    // top: 0;
-    // left: 0;
     display: none;
   }
 }
@@ -1208,7 +1082,6 @@ ul.slider {
     a {
       text-align: center;
       font-size: 32px;
-      // line-height: 1.2;
       margin: 0;
     }
 
@@ -1226,14 +1099,10 @@ ul.slider {
   }
 
   &-top {
-    justify-content: space-around;
-    padding: 0 0 45px 0;
-    border-bottom: 1px solid $second;
     margin: 0 0 60px 0;
-
-    &-desc {
-      height: 100%;
-    }
+    padding: 0 0 45px 0;
+    justify-content: space-around;
+    border-bottom: 1px solid $second;
 
     .social-media {
       gap: 10px;
@@ -1263,10 +1132,6 @@ ul.slider {
         height: auto;
       }
     }
-  }
-
-  .first-breakpoint-in {
-    display: none;
   }
 }
 
@@ -1434,7 +1299,7 @@ ul.slider {
     }
   }
 
-  .section.about {
+  .about {
     padding: 45px 0 0;
 
     p {
@@ -1442,12 +1307,6 @@ ul.slider {
         margin: 30px 0;
       }
     }
-
-    // .values {
-    //   &-wrapper {
-    //     height: 200px;
-    //   }
-    // }
   }
 
   .schedule {
@@ -1500,24 +1359,35 @@ ul.slider {
     }
   }
 
-  footer {
-    .first-breakpoint-in {
-      display: flex;
-      justify-content: center;
-    }
+  .footer {
+    &-grid {
+      display: grid;
+      row-gap: 40px;
 
-    .footer {
-      &-top-title.first-breakpoint-in {
-        margin: 40px 0 0;
+      &-one {
+        grid-column: 1;
+        grid-row: 1/2;
       }
 
-      &-top-desc.flex {
-        justify-content: flex-start;
+      &-two {
+        grid-column: 1;
+        grid-row: 2/2;
       }
-    }
 
-    .first-breakpoint-out {
-      display: none;
+      &-three {
+        grid-column: 2;
+        grid-row: 1/2;
+      }
+
+      &-four {
+        grid-column: 2;
+        grid-row: 2/2;
+      }
+
+      &-five {
+        grid-column: 3;
+        grid-row: 1/2;
+      }
     }
   }
 }
@@ -1543,8 +1413,8 @@ ul.slider {
     margin: 0 0 0 10px;
   }
 
-  .section.about {
-    .values {
+  .about {
+    &-values {
       &-single {
         p {
           &:first-of-type {
@@ -1656,22 +1526,18 @@ ul.slider {
     &-slider {
       .slick-prev,
       .slick-next {
-        width: 38px;
-        height: 53px;
+        @include slicksSize;
 
         &::before {
+          @include slicksSize;
+          @include backgroundSetup;
           content: "";
           display: block;
-          width: 38px;
-          height: 53px;
-          background-size: cover;
-          background-position: center;
-          background-repeat: no-repeat;
         }
       }
 
       .slick-prev {
-        left: -75px;
+        left: slickX(5);
 
         &::before {
           background-image: url(../img/arrow-left.svg);
@@ -1679,7 +1545,7 @@ ul.slider {
       }
 
       .slick-next {
-        right: -75px;
+        right: slickX(5);
         &::before {
           background-image: url(../img/arrow-right.svg);
         }
@@ -1727,8 +1593,8 @@ ul.slider {
     }
   }
 
-  .section.about {
-    .values {
+  .about {
+    &-values {
       &-wrapper {
         max-width: 650px;
         height: auto;
@@ -1765,11 +1631,11 @@ ul.slider {
   .schedule {
     &-slider {
       .slick-next {
-        right: -40px;
+        right: slickX(8);
       }
 
       .slick-prev {
-        left: -40px;
+        left: slickX(8);
       }
     }
   }
@@ -1814,8 +1680,8 @@ ul.slider {
     }
   }
 
-  .section.about {
-    .values {
+  .about {
+    &-values {
       &-wrapper {
         flex-wrap: wrap;
         max-width: 400px;
@@ -1824,8 +1690,8 @@ ul.slider {
       &-single {
         width: 45%;
 
-        &:nth-of-type(n + 3) {
-          margin: 20px 0 0;
+        p {
+          margin: 0 !important;
         }
       }
     }
@@ -1845,11 +1711,11 @@ ul.slider {
 
     &-slider {
       .slick-next {
-        right: -75px;
+        right: slickX(5);
       }
 
       .slick-prev {
-        left: -75px;
+        left: slickX(5);
       }
     }
 
@@ -1910,11 +1776,11 @@ ul.slider {
       }
 
       .slick-next {
-        right: -100px;
+        right: slickX(2);
       }
 
       .slick-prev {
-        left: -100px;
+        left: slickX(2);
       }
     }
   }
@@ -1968,11 +1834,11 @@ ul.slider {
   .our-team {
     ul {
       .slick-prev {
-        left: -30px;
+        left: slickX(9);
       }
 
       .slick-next {
-        right: -30px;
+        right: slickX(9);
       }
     }
 
@@ -1997,7 +1863,7 @@ ul.slider {
     font-size: 18px;
   }
 
-  .section.about {
+  .about {
     .section {
       &-container {
         margin: 0 0 50px;
@@ -2102,8 +1968,8 @@ ul.slider {
     }
   }
 
-  .section.about {
-    .values {
+  .about {
+    &-values {
       &-wrapper {
         position: relative;
       }
@@ -2113,11 +1979,11 @@ ul.slider {
   .testimonials {
     &-slider {
       .slick-prev {
-        left: -60px;
+        left: slickX(6);
       }
 
       .slick-next {
-        right: -60px;
+        right: slickX(6);
       }
 
       li {
@@ -2136,11 +2002,11 @@ ul.slider {
   .schedule {
     &-slider {
       .slick-next {
-        right: -60px;
+        right: slickX(6);
       }
 
       .slick-prev {
-        left: -60px;
+        left: slickX(6);
       }
     }
   }
@@ -2148,11 +2014,11 @@ ul.slider {
   .pricing {
     &-slider {
       .slick-next {
-        right: -60px;
+        right: slickX(6);
       }
 
       .slick-prev {
-        left: -60px;
+        left: slickX(6);
       }
     }
   }
@@ -2165,11 +2031,11 @@ ul.slider {
 
           ul {
             .slick-prev {
-              left: -50px;
+              left: slickX(7);
             }
 
             .slick-next {
-              right: -50px;
+              right: slickX(7);
             }
           }
         }
@@ -2288,8 +2154,8 @@ ul.slider {
       &-button {
         position: fixed;
         bottom: 0;
-        width: 100%;
         left: 0;
+        width: 100%;
         border-radius: 0;
         margin: 0;
       }
@@ -2299,8 +2165,6 @@ ul.slider {
       .register {
         &-button {
           @include thirdBoxshadow;
-          // background-color: $third;
-          // box-shadow: 0px 0 50px rgba(0, 0, 0, 0.1);
         }
       }
     }
@@ -2316,8 +2180,6 @@ ul.slider {
 
     &-photo.two {
       @include fullSize;
-      // width: 100%;
-      // height: 100%;
       top: 0;
       background-size: cover;
     }
@@ -2327,8 +2189,8 @@ ul.slider {
     }
   }
 
-  .section.about {
-    .values {
+  .about {
+    &-values {
       position: relative;
 
       &-wrapper {
@@ -2384,64 +2246,18 @@ ul.slider {
     }
   }
 
-  footer {
-    .first {
-      &-breakpoint {
-        &-in {
-          display: none;
-        }
-
-        &-out {
-          display: flex;
-        }
+  .footer {
+    &-top {
+      div {
+        grid-column: 1;
+        grid-row: unset;
       }
     }
 
-    .footer {
-      &-top {
-        flex-wrap: wrap;
-
-        &-item {
-          width: 50%;
-
-          &:last-of-type {
-            display: none;
-          }
-        }
-      }
-
-      &-wrapper {
-        h4 {
-          margin: 0;
-        }
-
-        .left {
-          &:first-of-type {
-            margin: 0 0 20px;
-          }
-
-          :is(h4, p, a) {
-            text-align: left;
-          }
-
-          .footer-top-desc {
-            align-items: flex-start;
-          }
-        }
-
-        .right {
-          &:first-of-type {
-            margin: 0 0 20px;
-          }
-
-          :is(h4, p, a) {
-            text-align: right;
-          }
-
-          .footer-top-desc {
-            align-items: flex-end;
-          }
-        }
+    &-bottom {
+      &-logo {
+        max-width: unset;
+        margin: 0 auto 50px;
       }
     }
   }
@@ -2484,14 +2300,14 @@ ul.slider {
     }
   }
 
-  .section.about {
+  .about {
     .social {
       &-media {
         margin: 30px 0 15px;
       }
     }
 
-    .values {
+    &-values {
       &-single {
         width: 50%;
       }
@@ -2502,12 +2318,10 @@ ul.slider {
     &-slider {
       .slick-prev,
       .slick-next {
-        width: 30px;
-        height: 40px;
+        @include slickSizeSmall;
 
         &::before {
-          width: 30px;
-          height: 40px;
+          @include slickSizeSmall;
         }
       }
     }
@@ -2517,12 +2331,10 @@ ul.slider {
     &-slider {
       .slick-prev,
       .slick-next {
-        width: 30px;
-        height: 40px;
+        @include slickSizeSmall;
 
         &::before {
-          width: 30px;
-          height: 40px;
+          @include slickSizeSmall;
         }
       }
     }
@@ -2540,12 +2352,10 @@ ul.slider {
 
       .slick-prev,
       .slick-next {
-        width: 30px;
-        height: 40px;
+        @include slickSizeSmall;
 
         &::before {
-          width: 30px;
-          height: 40px;
+          @include slickSizeSmall;
         }
       }
     }
@@ -2564,12 +2374,10 @@ ul.slider {
           ul {
             .slick-prev,
             .slick-next {
-              width: 30px;
-              height: 40px;
+              @include slickSizeSmall;
 
               &::before {
-                width: 30px;
-                height: 40px;
+                @include slickSizeSmall;
               }
             }
           }
@@ -2619,11 +2427,11 @@ ul.slider {
   .testimonials {
     &-slider {
       .slick-prev {
-        left: -40px;
+        left: slickX(8);
       }
 
       .slick-next {
-        right: -40px;
+        right: slickX(8);
       }
     }
   }
@@ -2631,11 +2439,11 @@ ul.slider {
   .schedule {
     &-slider {
       .slick-next {
-        right: -40px;
+        right: slickX(8);
       }
 
       .slick-prev {
-        left: -40px;
+        left: slickX(8);
       }
     }
   }
@@ -2643,11 +2451,11 @@ ul.slider {
   .pricing {
     &-slider {
       .slick-next {
-        right: -40px;
+        right: slickX(8);
       }
 
       .slick-prev {
-        left: -40px;
+        left: slickX(8);
       }
     }
 
@@ -2684,55 +2492,6 @@ ul.slider {
       }
     }
   }
-
-  footer {
-    .first-breakpoint {
-      &-out {
-        display: none;
-      }
-
-      &-in {
-        display: flex;
-      }
-    }
-
-    .footer {
-      &-top {
-        &-item {
-          width: 100%;
-        }
-
-        &-title.first-breakpoint-in {
-          margin: 20px 0 0;
-        }
-      }
-
-      &-wrapper {
-        .left,
-        .right {
-          :is(h4, p, a) {
-            text-align: center;
-          }
-
-          .footer {
-            &-top {
-              &-desc {
-                align-items: center;
-              }
-            }
-          }
-        }
-      }
-
-      &-bottom-logo {
-        max-width: unset;
-
-        img {
-          margin: 0 auto;
-        }
-      }
-    }
-  }
 }
 
 @media (max-width: 400px) {
@@ -2758,6 +2517,15 @@ ul.slider {
     }
   }
 
+  .navigation,
+  .footer-bottom {
+    &-logo {
+      img {
+        width: 130px;
+      }
+    }
+  }
+
   .slick-prev,
   .slick-next {
     top: auto !important;
@@ -2765,11 +2533,11 @@ ul.slider {
   }
 
   .slick-prev {
-    left: 30% !important;
+    left: slickX(10) !important;
   }
 
   .slick-next {
-    right: 30% !important;
+    right: slickX(10) !important;
   }
 
   .schedule {
@@ -2808,8 +2576,8 @@ ul.slider {
 }
 
 @media (max-width: 375px) {
-  .section.about {
-    .values {
+  .about {
+    &-values {
       &-wrapper {
         max-width: 100%;
         padding: 20px 50px;
@@ -2856,10 +2624,3 @@ ul.slider {
     font-size: 20px;
   }
 }
-
-// Optymalizacja
-
-/*
-1. Cały setup strzałek w sliderze jako mixin SASS
-2. section.about
-*/

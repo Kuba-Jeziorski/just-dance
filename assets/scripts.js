@@ -1,11 +1,11 @@
 'strict mode'
 
-// IMPORTANT adding class to navigation while its topOffset is over 95px
-  const navigationOffset = function() {
-    window.addEventListener('scroll', function() {
-      const navigation = document.querySelector('#nav');
-      if (window.scrollY >= 95) navigation.classList.add('navigation-scrolled');
-      if ((window.scrollY) < 95 && navigation.classList.contains('navigation-scrolled')) navigation.classList.remove('navigation-scrolled');
+// IMPORTANT Adding class to navigation while its topOffset is over 95px
+const navigationOffset = function() {
+  window.addEventListener('scroll', function() {
+    const navigation = document.querySelector('#nav');
+    if (window.scrollY >= 95) navigation.classList.add('navigation-scrolled');
+    if ((window.scrollY) < 95 && navigation.classList.contains('navigation-scrolled')) navigation.classList.remove('navigation-scrolled');
   })
 
   window.addEventListener('load', function() {
@@ -16,7 +16,7 @@
 navigationOffset();
 
 
-// IMPORTANT numeric increment
+// IMPORTANT Numeric increment
 const numericIncrement = function() {
   const number1 = document.querySelector("#number1");
   const number2 = document.querySelector("#number2");
@@ -43,7 +43,7 @@ const numericIncrement = function() {
 numericIncrement();
       
 
-// IMPORTANT slick slides
+// IMPORTANT Slick slides
 $(document).ready(function(){
   $('.slider').slick({
     slidesToShow: 1,
@@ -117,8 +117,7 @@ $(document).ready(function(){
 });
 
 
-
-// IMPORTANT Scroll to section while press #scrolling
+// IMPORTANT Scroll to section (-100px) while press #scrolling
 (function() {
   const scrollingArrow = document.querySelector('#scrolling');
   const scrollTo = function(id) {
@@ -176,7 +175,7 @@ $(document).ready(function(){
 })();
 
 
-// IMPORTANT modal
+// IMPORTANT Modal
 const modal = function() {
   const openers = document.querySelectorAll('.modal-open');
   const modalElement = document.querySelector('#modal');
@@ -191,7 +190,7 @@ const modal = function() {
 
   const closingModal = function (e) {
     // preventing from closing modal when click on content
-    // X button is now only element out of modalContent
+    // X button is now only element out of modalContent which causes modal to close
     if (modalElement.style.display === 'flex' && !modalContent.contains(e.target)) {
       modalElement.style.display = 'none';
     }
@@ -220,6 +219,7 @@ const modal = function() {
 }
 modal();
 
+// IMPORTANT Screen after validation in modal
 (function() {
 
   const mainForm = document.querySelector("#registration-form");
@@ -241,7 +241,7 @@ modal();
 })();
 
 
-// IMPORTANT Hiding toggle while pressing navigation item
+// IMPORTANT Hiding toggle while pressing navigation item (link)
 (function() {
   const menuToggle = document.querySelector('#menu-toggle');
   const checkbox = document.querySelector('#menu-toggle-checkbox')

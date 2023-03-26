@@ -1,3 +1,20 @@
 $first: #101010;
 $second: #fefefe;
 $third: #b8a68e;
+
+$slickTranslate: (
+  1: -118px,
+  2: -100px,
+  3: -85px,
+  4: -80px,
+  5: -75px,
+  6: -60px,
+  7: -50px,
+  8: -40px,
+  9: -30px,
+  10: 30%,
+);
+
+@function slickX($slickX) {
+  @return map-get($slickTranslate, $slickX);
+}
