@@ -1153,6 +1153,16 @@ ul.slider {
   }
 }
 
+@media (max-width: 1800px) {
+  .navigation,
+  .footer {
+    &-wrapper {
+      max-width: 100%;
+      padding: 0 50px;
+    }
+  }
+}
+
 @media (max-width: 1550px) {
   li {
     font-size: 24px;
@@ -1247,6 +1257,7 @@ ul.slider {
   .footer {
     &-wrapper {
       max-width: 1250px;
+      padding: 0;
     }
   }
 
