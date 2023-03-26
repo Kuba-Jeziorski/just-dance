@@ -1158,7 +1158,18 @@ ul.slider {
   .footer {
     &-wrapper {
       max-width: 100%;
+    }
+  }
+
+  .navigation {
+    &-wrapper {
       padding: 0 50px;
+    }
+  }
+
+  .footer {
+    &-wrapper {
+      padding: 65px 50px;
     }
   }
 }
@@ -1257,7 +1268,6 @@ ul.slider {
   .footer {
     &-wrapper {
       max-width: 1250px;
-      padding: 0;
     }
   }
 

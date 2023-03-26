@@ -845,8 +845,11 @@ ul.slider {
 @media (max-width: 1800px) {
   .navigation-wrapper,
   .footer-wrapper {
-    max-width: 100%;
-    padding: 0 50px; } }
+    max-width: 100%; }
+  .navigation-wrapper {
+    padding: 0 50px; }
+  .footer-wrapper {
+    padding: 65px 50px; } }
 
 @media (max-width: 1550px) {
   li {
@@ -887,8 +890,7 @@ ul.slider {
     font-size: 22px; }
   .navigation-wrapper,
   .footer-wrapper {
-    max-width: 1250px;
-    padding: 0; }
+    max-width: 1250px; }
   .footer-wrapper :is(h4, p, a) {
     font-size: 26px; }
   .section-container p {
