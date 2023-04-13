@@ -8,24 +8,40 @@
   src: local(""), url("../fonts/limelight-v16-latin-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/limelight-v16-latin-regular.woff2") format("woff2"), url("../fonts/limelight-v16-latin-regular.woff") format("woff"), url("../fonts/limelight-v16-latin-regular.ttf") format("truetype"), url("../fonts/limelight-v16-latin-regular.svg#Limelight") format("svg");
   /* Legacy iOS */ }
 
-/* roboto-condensed-regular - latin */
+/* roboto-regular - latin_latin-ext */
 @font-face {
-  font-family: "Roboto Condensed";
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
-  src: url("../fonts/roboto-condensed-v25-latin-regular.eot");
+  src: url("../fonts/roboto-v30-latin_latin-ext-regular.eot");
   /* IE9 Compat Modes */
-  src: local(""), url("../fonts/roboto-condensed-v25-latin-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/roboto-condensed-v25-latin-regular.woff2") format("woff2"), url("../fonts/roboto-condensed-v25-latin-regular.woff") format("woff"), url("../fonts/roboto-condensed-v25-latin-regular.ttf") format("truetype"), url("../fonts/roboto-condensed-v25-latin-regular.svg#RobotoCondensed") format("svg");
+  src: url("../fonts/roboto-v30-latin_latin-ext-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/roboto-v30-latin_latin-ext-regular.woff2") format("woff2"), url("../fonts/roboto-v30-latin_latin-ext-regular.woff") format("woff"), url("../fonts/roboto-v30-latin_latin-ext-regular.ttf") format("truetype"), url("../fonts/roboto-v30-latin_latin-ext-regular.svg#Roboto") format("svg");
   /* Legacy iOS */ }
 
-/* roboto-condensed-700 - latin */
+/* roboto-500 - latin_latin-ext */
 @font-face {
-  font-family: "Roboto Condensed";
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../fonts/roboto-v30-latin_latin-ext-500.eot");
+  /* IE9 Compat Modes */
+  src: url("../fonts/roboto-v30-latin_latin-ext-500.eot?#iefix") format("embedded-opentype"), url("../fonts/roboto-v30-latin_latin-ext-500.woff2") format("woff2"), url("../fonts/roboto-v30-latin_latin-ext-500.woff") format("woff"), url("../fonts/roboto-v30-latin_latin-ext-500.ttf") format("truetype"), url("../fonts/roboto-v30-latin_latin-ext-500.svg#Roboto") format("svg");
+  /* Legacy iOS */ }
+
+/* roboto-700 - latin_latin-ext */
+@font-face {
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Roboto";
   font-style: normal;
   font-weight: 700;
-  src: url("../fonts/roboto-condensed-v25-latin-700.eot");
+  src: url("../fonts/roboto-v30-latin_latin-ext-700.eot");
   /* IE9 Compat Modes */
-  src: local(""), url("../fonts/roboto-condensed-v25-latin-700.eot?#iefix") format("embedded-opentype"), url("../fonts/roboto-condensed-v25-latin-700.woff2") format("woff2"), url("../fonts/roboto-condensed-v25-latin-700.woff") format("woff"), url("../fonts/roboto-condensed-v25-latin-700.ttf") format("truetype"), url("../fonts/roboto-condensed-v25-latin-700.svg#RobotoCondensed") format("svg");
+  src: url("../fonts/roboto-v30-latin_latin-ext-700.eot?#iefix") format("embedded-opentype"), url("../fonts/roboto-v30-latin_latin-ext-700.woff2") format("woff2"), url("../fonts/roboto-v30-latin_latin-ext-700.woff") format("woff"), url("../fonts/roboto-v30-latin_latin-ext-700.ttf") format("truetype"), url("../fonts/roboto-v30-latin_latin-ext-700.svg#Roboto") format("svg");
   /* Legacy iOS */ }
 
 /*
@@ -34,7 +50,7 @@ Github: https://github.com/Kuba-Jeziorski
 */
 * {
   box-sizing: border-box;
-  font-family: "Roboto Condensed", sans-serif;
+  font-family: "Roboto", sans-serif;
   color: #fefefe; }
 
 html {
@@ -46,6 +62,7 @@ body {
   background-color: #101010;
   margin: 0;
   line-height: 1.5;
+  font-size: 24px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
@@ -59,14 +76,11 @@ h2 {
 
 h1 {
   color: #b8a68e;
-  font-size: 5.1vw; }
+  font-size: 5vw; }
 
 h2 {
   color: #101010;
   font-size: 4.2vw; }
-
-h2.margined {
-  margin: 50px 0; }
 
 h2.second {
   color: #b8a68e !important; }
@@ -77,8 +91,8 @@ ul {
   margin-block-end: 0;
   padding-inline-start: 0; }
 
-li {
-  font-size: 1.7vw; }
+ul.slider {
+  width: 100%; }
 
 a {
   display: block;
@@ -88,7 +102,6 @@ a {
     color: #b8a68e; }
 
 p {
-  font-size: 1.7vw;
   margin-block-start: 0;
   margin-block-end: 0;
   padding-inline-start: 0; }
@@ -100,7 +113,6 @@ select,
 input,
 ::placeholder {
   color: #b8a68e;
-  font-size: 24px;
   background: transparent; }
 
 select,
@@ -153,8 +165,32 @@ footer {
   .flex-w {
     flex-wrap: wrap; }
 
-ul.slider {
-  width: 100%; }
+.social-size {
+  font-size: 50px; }
+
+.enormous {
+  font-size: 32px; }
+
+.big {
+  font-size: 28px; }
+
+.medium {
+  font-size: 24px; }
+
+.small {
+  font-size: 20px; }
+
+.little {
+  font-size: 16px; }
+
+.centered {
+  text-align: center; }
+
+.lower-line {
+  line-height: 1.2; }
+
+.margined {
+  margin: 50px 0; }
 
 .overflowed {
   overflow: hidden;
@@ -185,7 +221,7 @@ ul.slider {
         left: 50%;
         translate: -50% -50%; }
         #nav #menu-toggle-bg ul li {
-          font-size: 35px; }
+          font-size: 32px; }
           #nav #menu-toggle-bg ul li:not(:last-of-type) {
             margin: 0 0 20px; }
             #nav #menu-toggle-bg ul li:not(:last-of-type) a:hover {
@@ -320,8 +356,6 @@ ul.slider {
     .section-container h2 {
       text-align: center;
       color: #101010; }
-    .section-container p {
-      font-size: 24px; }
   .section-half {
     width: 50%; }
 
@@ -357,14 +391,13 @@ ul.slider {
       width: 100%; }
       .about-values-single p:first-of-type {
         font-family: "Limelight";
-        font-size: 120px;
-        margin: 0; }
+        margin: 0;
+        font-size: 5.3vw; }
   .about .social-media {
     margin: 60px 0; }
     .about .social-media a {
       margin: 0 10px; }
       .about .social-media a i {
-        font-size: 50px;
         color: #b8a68e;
         transition: color 0.3s; }
       .about .social-media a:hover i {
@@ -399,7 +432,8 @@ ul.slider {
   .central-container p {
     text-align: center; }
   .central-container .register-button {
-    margin: 20px auto 0; }
+    margin: 20px auto 0;
+    width: 300px; }
 
 .arrow-scroll {
   width: 55px;
@@ -473,7 +507,6 @@ ul.slider {
       background-color: rgba(255, 245, 233, 0.39); }
       .testimonials-slider li p.names {
         color: #160c0b;
-        font-size: 32px;
         font-weight: 500;
         margin: 0 0 30px; }
       .testimonials-slider li p:last-of-type {
@@ -502,7 +535,6 @@ ul.slider {
         background-color: #b8a68e;
         color: #101010;
         text-align: center;
-        font-size: 40px;
         padding: 5px 0;
         margin: 0 0 15px 0; }
         .schedule ul li .day-description {
@@ -549,12 +581,10 @@ ul.slider {
     .pricing-item:nth-of-type(2) {
       margin: 30px 0; }
     .pricing-item-title, .pricing-item-cost {
-      font-size: 40px;
       font-weight: 700;
       color: #101010;
       width: 20%; }
     .pricing-item-description {
-      font-size: 24px;
       color: #101010;
       width: 20%; }
     .pricing-item .register-button {
@@ -562,8 +592,7 @@ ul.slider {
       margin: 0;
       width: 250px;
       text-align: center;
-      color: #101010;
-      font-size: 32px; }
+      color: #101010; }
   .pricing-slider {
     display: none !important;
     max-width: 380px; }
@@ -654,12 +683,10 @@ ul.slider {
   .our-team .team-slider-name {
     color: #101010;
     text-align: center;
-    font-size: 32px;
     margin: 30px 0 0 0; }
   .our-team .team-slider-description {
     color: #101010;
-    text-align: center;
-    font-size: 25px; }
+    text-align: center; }
   .our-team .team-contact p {
     color: #101010;
     text-align: center; }
@@ -688,8 +715,7 @@ ul.slider {
       grid-template-rows: repeat(5, auto);
       row-gap: 25px; }
       .contact-us .content-grid :is(p, a) {
-        color: #101010;
-        font-size: 32px; }
+        color: #101010; }
       .contact-us .content-grid a {
         transition: color 0.3s; }
         .contact-us .content-grid a:hover {
@@ -698,7 +724,6 @@ ul.slider {
         font-weight: 700; }
     .contact-us .content-socials a i {
       color: #101010;
-      font-size: 50px;
       transition: color 0.3s; }
     .contact-us .content-socials a:first-of-type {
       margin: 0 10px 0 0; }
@@ -776,8 +801,7 @@ ul.slider {
     position: relative;
     z-index: 5; }
     .modal-inner > p {
-      font-weight: 500;
-      font-weight: 700; }
+      font-weight: 500; }
     .modal-inner :is(p, span) {
       color: #101010 !important;
       text-align: center; }
@@ -803,7 +827,6 @@ ul.slider {
   .footer-wrapper p,
   .footer-wrapper a {
     text-align: center;
-    font-size: 32px;
     margin: 0; }
   .footer-wrapper a {
     transition: 0.3s color; }
@@ -821,7 +844,6 @@ ul.slider {
     gap: 10px; }
     .footer-top .social-media a i {
       color: #fefefe;
-      font-size: 50px;
       transition: color 0.3s; }
     .footer-top .social-media a:hover i {
       color: #101010; }
@@ -837,10 +859,8 @@ ul.slider {
     font-size: 96px; }
   h2 {
     font-size: 80px; }
-  li {
-    font-size: 24px; }
-  p {
-    font-size: 24px; } }
+  .about-values-single p:first-of-type {
+    font-size: 100px; } }
 
 @media (max-width: 1800px) {
   .navigation-wrapper,
@@ -852,83 +872,46 @@ ul.slider {
     padding: 65px 50px; } }
 
 @media (max-width: 1550px) {
-  li {
-    font-size: 24px; }
-  p {
-    font-size: 22px; }
+  .enormous {
+    font-size: 28px; }
   .schedule .section-container {
     max-width: 1200px; }
-  .day {
-    font-size: 32px; }
   .pricing .section-container {
     max-width: 1200px; }
-  .pricing-item-title, .pricing-item-cost {
-    font-size: 34px; }
-  .pricing-item-description {
-    font-size: 22px; }
-  .pricing-item .register-button {
-    font-size: 28px; }
   .our-team {
     padding: 50px 0 0; }
-    .our-team .team-slider-name {
-      font-size: 28px; }
-    .our-team .team-slider-description {
-      font-size: 22px; }
     .our-team .team-slider-wrapper {
-      height: 420px; }
-  .contact-us .content-grid :is(p, a) {
-    font-size: 26px; }
-  .contact-us .content-socials a i {
-    font-size: 35px; }
-  .footer h4,
-  .footer p,
-  .footer a {
-    font-size: 24px; } }
+      height: 420px; } }
 
 @media (max-width: 1500px) {
-  li {
-    font-size: 22px; }
   .navigation-wrapper,
   .footer-wrapper {
-    max-width: 1250px; }
-  .footer-wrapper :is(h4, p, a) {
-    font-size: 26px; }
-  .section-container p {
-    font-size: 22px; }
-  .schedule ul li .day {
-    font-size: 36px; }
+    max-width: 100%; }
   .testimonials-slider li p.names {
-    font-size: 28px;
     margin: 0 0 20px; } }
 
 @media (max-width: 1400px) {
+  body,
+  .medium {
+    font-size: 20px; }
   .section-container {
     max-width: 600px; }
-    .section-container p {
-      font-size: 20px; }
   .about {
     padding: 45px 0 0; }
-    .about p:first-of-type {
+    .about-wrapper p:first-of-type {
       margin: 30px 0; }
-  .schedule ul li .day {
-    font-size: 32px; }
+    .about-values-single p:first-of-type {
+      font-size: 6vw; }
   .pricing {
     padding: 0 0 150px; }
     .pricing .section-container {
       max-width: 900px; }
     .pricing-item {
       padding: 0 25px; }
-      .pricing-item-title, .pricing-item-cost {
-        font-size: 32px; }
-      .pricing-item-description {
-        font-size: 20px; }
       .pricing-item .register-button {
-        width: 220px;
-        font-size: 22px; }
+        width: 220px; }
   .our-team {
     padding: 0; }
-  .contact-us .content-grid :is(p, a) {
-    font-size: 24px; }
   .footer-grid {
     display: grid;
     row-gap: 40px; }
@@ -949,40 +932,27 @@ ul.slider {
       grid-row: 1/2; } }
 
 @media (max-width: 1300px) {
-  .navigation-wrapper,
-  .footer-wrapper {
-    max-width: 1150px; }
   .navigation-menu li {
     padding: 0 15px; }
   .register-button {
     width: 200px;
     margin: 0 0 0 10px; }
-  .about-values-single p:first-of-type {
-    font-size: 100px; }
   .about-values-wrapper {
     max-width: 850px; }
-  .section-container p {
-    font-size: 18px; }
-  .schedule ul li .day {
-    font-size: 28px; }
   .schedule .section-container {
     max-width: 100%;
     padding: 0 50px; }
-  .our-team .team-slider-name {
-    font-size: 24px; }
-  .our-team .team-slider-description {
-    font-size: 20px; }
-  .contact-us .content-grid :is(p, a) {
-    font-size: 22px; }
   .contact-us .content {
     max-width: 100%;
-    padding: 100px 50px 100px 100px; }
-  .footer-wrapper :is(h4, p, a) {
-    font-size: 24px; }
-  .footer-wrapper .social-media a i {
-    font-size: 40px; } }
+    padding: 100px 50px 100px 100px; } }
 
 @media (max-width: 1200px) {
+  h1 {
+    font-size: 7vw; }
+  h2 {
+    font-size: 5.2vw; }
+  .big {
+    font-size: 26px; }
   .overflowed {
     overflow: unset; }
   .navigation-wrapper,
@@ -1038,10 +1008,7 @@ ul.slider {
   .about-values-single {
     justify-content: unset; }
     .about-values-single p {
-      text-align: center;
-      font-size: 20px; }
-      .about-values-single p:first-of-type {
-        font-size: 80px; }
+      text-align: center; }
   .pricing-item-description {
     width: 25%; }
   .pricing-item-cost {
@@ -1054,10 +1021,6 @@ ul.slider {
     padding: 100px 20px 100px 50px; } }
 
 @media (max-width: 1000px) {
-  h1 {
-    font-size: 6.5vw; }
-  h2 {
-    font-size: 5.5vw; }
   .section-photo.two {
     width: 40%;
     z-index: -1; }
@@ -1071,7 +1034,7 @@ ul.slider {
     z-index: -1; }
   .about-values-wrapper {
     flex-wrap: wrap;
-    max-width: 400px; }
+    max-width: 500px; }
   .about-values-single {
     width: 45%; }
     .about-values-single p {
@@ -1104,6 +1067,8 @@ ul.slider {
       padding: 0 50px 150px; } }
 
 @media (max-width: 900px) {
+  h2 {
+    font-size: 6vw; }
   .fullsized-photo {
     opacity: 0.5; }
   .testimonials-slider li {
@@ -1113,12 +1078,7 @@ ul.slider {
   .testimonials-slider .slick-prev {
     left: -100px; }
   .pricing-item-title {
-    width: 30%;
-    font-size: 28px; }
-  .pricing-item-cost {
-    font-size: 28px; }
-  .pricing-item-description {
-    font-size: 18px; }
+    width: 30%; }
   .pricing-item .register-button {
     width: 180px; }
   .contact-us {
@@ -1141,19 +1101,15 @@ ul.slider {
 
 @media (max-width: 800px) {
   h1 {
-    font-size: 8.5vw; }
-  h2 {
-    font-size: 6.5vw; }
-  p {
+    font-size: 9vw; }
+  .big {
+    font-size: 24px; }
+  .small {
     font-size: 18px; }
   .about .section-container {
     margin: 0 0 50px; }
   .our-team .team-slider-item {
     margin: 0 30px; }
-  .our-team .team-slider-name {
-    font-size: 22px; }
-  .our-team .team-slider-description {
-    font-size: 18px; }
   .our-team .team-slider-wrapper {
     max-width: 550px; }
     .our-team .team-slider-wrapper ul .slick-next,
@@ -1170,11 +1126,14 @@ ul.slider {
     .pricing-item-title, .pricing-item-cost {
       width: 100%; }
     .pricing-item-description {
-      width: 50%; }
+      width: 100%; }
     .pricing-item .register-button {
       margin: 0 auto; } }
 
 @media (max-width: 700px) {
+  body,
+  .medium {
+    font-size: 18px; }
   .navigation-logo img,
   .footer-bottom-logo img {
     width: 180px; }
@@ -1186,16 +1145,15 @@ ul.slider {
     width: 50%; }
   .register-button {
     width: 175px; }
-  .central-container-description {
-    font-size: 24px; }
   .about-values-wrapper {
     position: relative; }
+  .about-values-single p:first-of-type {
+    font-size: 8vw; }
   .testimonials-slider .slick-prev {
     left: -60px; }
   .testimonials-slider .slick-next {
     right: -60px; }
   .testimonials-slider li p.names {
-    font-size: 24px;
     margin: 0 0 10px; }
   .testimonials::after {
     width: 50%; }
@@ -1215,8 +1173,6 @@ ul.slider {
       right: -50px; }
   .our-team .team-slider-item {
     margin: 0 15px; }
-  .contact-us .content-grid :is(p, a) {
-    font-size: 20px; }
   .modal-wrapper {
     max-width: 100%;
     margin: 0 50px; }
@@ -1224,17 +1180,15 @@ ul.slider {
     width: 100%;
     background-size: cover; }
   .modal #modal-validated {
-    padding: 0 20px; }
-  .footer-wrapper :is(h4, p, a) {
-    font-size: 20px; } }
+    padding: 0 20px; } }
 
 @media (max-width: 600px) {
+  h1 {
+    font-size: 11vw; }
   h2 {
-    font-size: 7.5vw; }
-  select,
-  input,
-  ::placeholder {
-    font-size: 20px; }
+    font-size: 8vw; }
+  .big {
+    font-size: 22px; }
   .fullsized-photo {
     width: 75%;
     height: 50vh;
@@ -1244,6 +1198,8 @@ ul.slider {
     transform: unset;
     translate: -50% -50%;
     height: 50vh; }
+    .central-container .register-button {
+      width: 250px; }
   .central-container {
     max-width: 100%; }
   #nav #menu-toggle {
@@ -1259,8 +1215,6 @@ ul.slider {
         top: -25px; }
       #nav #menu-toggle span:last-of-type {
         top: -10px; }
-    #nav #menu-toggle-bg ul li {
-      font-size: 30px; }
   .navigation {
     height: 70px; }
     .navigation .register-button {
@@ -1291,10 +1245,6 @@ ul.slider {
       max-width: 350px; }
     .about-values-single {
       width: 48%; }
-      .about-values-single p {
-        font-size: 18px; }
-      .about-values-single p:first-of-type {
-        font-size: 60px; }
   .testimonials::after {
     width: 100%; }
   .schedule .section-photo {
@@ -1314,24 +1264,16 @@ ul.slider {
     margin: 0 auto 50px; } }
 
 @media (max-width: 500px) {
-  h1 {
-    font-size: 10vw; }
-  select,
-  input,
-  ::placeholder {
-    font-size: 18px; }
   input[type="submit"] {
     width: 80%;
     height: 50px; }
-  p.central {
-    font-size: 22px; }
+  .small {
+    font-size: 16px; }
   .arrow-scroll {
     width: 42px;
     height: 30px; }
   .section-container {
     max-width: 300px; }
-    .section-container p {
-      font-size: 16px; }
   .about .social-media {
     margin: 30px 0 15px; }
   .about-values-single {
@@ -1382,12 +1324,6 @@ ul.slider {
     padding: 30px; } }
 
 @media (max-width: 450px) {
-  h1 {
-    font-size: 50px; }
-  h2 {
-    font-size: 45px; }
-  .social-media a i {
-    font-size: 40px; }
   .testimonials-slider .slick-prev {
     left: -40px; }
   .testimonials-slider .slick-next {
@@ -1401,8 +1337,7 @@ ul.slider {
   .pricing-slider .slick-prev {
     left: -40px; }
   .pricing-item .register-button {
-    width: 150px;
-    font-size: 18px; }
+    width: 150px; }
   .contact-us .content-grid {
     grid-template-columns: repeat(1, 1fr);
     row-gap: 0; }
@@ -1415,14 +1350,16 @@ ul.slider {
       margin: 20px 0 0; } }
 
 @media (max-width: 400px) {
+  h1 {
+    font-size: 50px; }
   h2 {
     font-size: 40px; }
-  select,
-  input,
-  ::placeholder {
-    font-size: 16px; }
-  #nav #menu-toggle-bg ul li {
-    font-size: 25px; }
+  .enormous {
+    font-size: 26px; }
+  .big {
+    font-size: 20px; }
+  .about-values-single p:first-of-type {
+    font-size: 40px; }
   .navigation-logo img,
   .footer-bottom-logo img {
     width: 130px; }
@@ -1436,12 +1373,8 @@ ul.slider {
     right: 30% !important; }
   .schedule .register-button {
     margin: 80px 0 35px; }
-  .schedule-slider li p {
-    font-size: 20px; }
   .our-team .team-contact {
     margin: 80px 0 20px; }
-  .our-team .team-slider-name {
-    font-size: 22px; }
   .contact-us #map {
     height: 40vh; } }
 
@@ -1449,10 +1382,6 @@ ul.slider {
   .about-values-wrapper {
     max-width: 100%;
     padding: 20px 50px; }
-  .about-values-single p {
-    font-size: 14px; }
-    .about-values-single p:first-of-type {
-      font-size: 55px; }
   .pricing-item {
     padding: 25px; }
   .our-team .team-contact {
@@ -1460,9 +1389,14 @@ ul.slider {
     padding: 0 50px; } }
 
 @media (max-width: 320px) {
+  body,
+  .medium {
+    font-size: 16px; }
   h1 {
     font-size: 45px; }
   h2 {
     font-size: 32px; }
-  p.central {
-    font-size: 20px; } }
+  .big {
+    font-size: 18px; }
+  .about-values-wrapper {
+    padding: 20px 10px; } }

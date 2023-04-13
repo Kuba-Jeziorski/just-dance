@@ -17,42 +17,58 @@
       url("../fonts/limelight-v16-latin-regular.svg#Limelight") format("svg"); /* Legacy iOS */
 }
 
-/* roboto-condensed-regular - latin */
+/* roboto-regular - latin_latin-ext */
 @font-face {
-  font-family: "Roboto Condensed";
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
-  src: url("../fonts/roboto-condensed-v25-latin-regular.eot"); /* IE9 Compat Modes */
-  src: local(""),
-    url("../fonts/roboto-condensed-v25-latin-regular.eot?#iefix")
+  src: url("../fonts/roboto-v30-latin_latin-ext-regular.eot"); /* IE9 Compat Modes */
+  src: url("../fonts/roboto-v30-latin_latin-ext-regular.eot?#iefix")
       format("embedded-opentype"),
-    /* IE6-IE8 */ url("../fonts/roboto-condensed-v25-latin-regular.woff2")
+    /* IE6-IE8 */ url("../fonts/roboto-v30-latin_latin-ext-regular.woff2")
       format("woff2"),
     /* Super Modern Browsers */
-      url("../fonts/roboto-condensed-v25-latin-regular.woff") format("woff"),
-    /* Modern Browsers */ url("../fonts/roboto-condensed-v25-latin-regular.ttf")
+      url("../fonts/roboto-v30-latin_latin-ext-regular.woff") format("woff"),
+    /* Modern Browsers */ url("../fonts/roboto-v30-latin_latin-ext-regular.ttf")
       format("truetype"),
     /* Safari, Android, iOS */
-      url("../fonts/roboto-condensed-v25-latin-regular.svg#RobotoCondensed")
+      url("../fonts/roboto-v30-latin_latin-ext-regular.svg#Roboto")
       format("svg"); /* Legacy iOS */
 }
-
-/* roboto-condensed-700 - latin */
+/* roboto-500 - latin_latin-ext */
 @font-face {
-  font-family: "Roboto Condensed";
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Roboto";
   font-style: normal;
-  font-weight: 700;
-  src: url("../fonts/roboto-condensed-v25-latin-700.eot"); /* IE9 Compat Modes */
-  src: local(""),
-    url("../fonts/roboto-condensed-v25-latin-700.eot?#iefix")
+  font-weight: 500;
+  src: url("../fonts/roboto-v30-latin_latin-ext-500.eot"); /* IE9 Compat Modes */
+  src: url("../fonts/roboto-v30-latin_latin-ext-500.eot?#iefix")
       format("embedded-opentype"),
-    /* IE6-IE8 */ url("../fonts/roboto-condensed-v25-latin-700.woff2")
+    /* IE6-IE8 */ url("../fonts/roboto-v30-latin_latin-ext-500.woff2")
       format("woff2"),
     /* Super Modern Browsers */
-      url("../fonts/roboto-condensed-v25-latin-700.woff") format("woff"),
-    /* Modern Browsers */ url("../fonts/roboto-condensed-v25-latin-700.ttf")
+      url("../fonts/roboto-v30-latin_latin-ext-500.woff") format("woff"),
+    /* Modern Browsers */ url("../fonts/roboto-v30-latin_latin-ext-500.ttf")
       format("truetype"),
     /* Safari, Android, iOS */
-      url("../fonts/roboto-condensed-v25-latin-700.svg#RobotoCondensed")
-      format("svg"); /* Legacy iOS */
+      url("../fonts/roboto-v30-latin_latin-ext-500.svg#Roboto") format("svg"); /* Legacy iOS */
+}
+/* roboto-700 - latin_latin-ext */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/roboto-v30-latin_latin-ext-700.eot"); /* IE9 Compat Modes */
+  src: url("../fonts/roboto-v30-latin_latin-ext-700.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-IE8 */ url("../fonts/roboto-v30-latin_latin-ext-700.woff2")
+      format("woff2"),
+    /* Super Modern Browsers */
+      url("../fonts/roboto-v30-latin_latin-ext-700.woff") format("woff"),
+    /* Modern Browsers */ url("../fonts/roboto-v30-latin_latin-ext-700.ttf")
+      format("truetype"),
+    /* Safari, Android, iOS */
+      url("../fonts/roboto-v30-latin_latin-ext-700.svg#Roboto") format("svg"); /* Legacy iOS */
 }

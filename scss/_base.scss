@@ -5,7 +5,7 @@ Github: https://github.com/Kuba-Jeziorski
 
 * {
   box-sizing: border-box;
-  font-family: "Roboto Condensed", sans-serif;
+  font-family: "Roboto", sans-serif;
   color: $second;
 }
 
@@ -18,6 +18,7 @@ body {
   background-color: $first;
   margin: 0;
   line-height: 1.5;
+  font-size: 24px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -31,16 +32,12 @@ h2 {
 
 h1 {
   color: $third;
-  font-size: 5.1vw;
+  font-size: 5vw;
 }
 
 h2 {
   color: $first;
   font-size: 4.2vw;
-}
-
-h2.margined {
-  margin: 50px 0;
 }
 
 h2.second {
@@ -52,8 +49,8 @@ ul {
   @include defaultFonts;
 }
 
-li {
-  font-size: 1.7vw;
+ul.slider {
+  width: 100%;
 }
 
 a {
@@ -67,7 +64,6 @@ a {
 }
 
 p {
-  font-size: 1.7vw;
   @include defaultFonts;
 }
 
@@ -79,7 +75,6 @@ select,
 input,
 ::placeholder {
   color: $third;
-  font-size: 24px;
   background: transparent;
 }
 
@@ -160,8 +155,40 @@ footer {
   }
 }
 
-ul.slider {
-  width: 100%;
+.social-size {
+  font-size: 50px;
+}
+
+.enormous {
+  font-size: 32px;
+}
+
+.big {
+  font-size: 28px;
+}
+
+.medium {
+  font-size: 24px;
+}
+
+.small {
+  font-size: 20px;
+}
+
+.little {
+  font-size: 16px;
+}
+
+.centered {
+  text-align: center;
+}
+
+.lower-line {
+  line-height: 1.2;
+}
+
+.margined {
+  margin: 50px 0;
 }
 
 .overflowed {
@@ -196,7 +223,7 @@ ul.slider {
         translate: -50% -50%;
 
         li {
-          font-size: 35px;
+          font-size: 32px;
 
           &:not(:last-of-type) {
             margin: 0 0 20px;
@@ -408,10 +435,6 @@ ul.slider {
       text-align: center;
       color: $first;
     }
-
-    p {
-      font-size: 24px;
-    }
   }
 
   &-half {
@@ -460,8 +483,8 @@ ul.slider {
 
       p:first-of-type {
         font-family: "Limelight";
-        font-size: 120px;
         margin: 0;
+        font-size: 5.3vw;
       }
     }
   }
@@ -473,7 +496,6 @@ ul.slider {
       margin: 0 10px;
 
       i {
-        font-size: 50px;
         color: $third;
         transition: color 0.3s;
       }
@@ -519,6 +541,7 @@ ul.slider {
 
   .register-button {
     margin: 20px auto 0;
+    width: 300px;
   }
 }
 
@@ -619,7 +642,6 @@ ul.slider {
       p {
         &.names {
           color: #160c0b;
-          font-size: 32px;
           font-weight: 500;
           margin: 0 0 30px;
         }
@@ -668,7 +690,6 @@ ul.slider {
         background-color: $third;
         color: $first;
         text-align: center;
-        font-size: 40px;
         padding: 5px 0;
         margin: 0 0 15px 0;
 
@@ -742,14 +763,12 @@ ul.slider {
 
     &-title,
     &-cost {
-      font-size: 40px;
       font-weight: 700;
       color: $first;
       width: 20%;
     }
 
     &-description {
-      font-size: 24px;
       color: $first;
       width: 20%;
     }
@@ -760,7 +779,6 @@ ul.slider {
       width: 250px;
       text-align: center;
       color: $first;
-      font-size: 32px;
     }
   }
 
@@ -875,14 +893,12 @@ ul.slider {
     &-name {
       color: $first;
       text-align: center;
-      font-size: 32px;
       margin: 30px 0 0 0;
     }
 
     &-description {
       color: $first;
       text-align: center;
-      font-size: 25px;
     }
   }
 
@@ -925,7 +941,6 @@ ul.slider {
 
       :is(p, a) {
         color: $first;
-        font-size: 32px;
       }
 
       a {
@@ -945,7 +960,6 @@ ul.slider {
       a {
         i {
           color: $first;
-          font-size: 50px;
           transition: color 0.3s;
         }
 
@@ -1044,7 +1058,6 @@ ul.slider {
 
     & > p {
       font-weight: 500;
-      font-weight: 700;
     }
 
     :is(p, span) {
@@ -1081,7 +1094,6 @@ ul.slider {
     p,
     a {
       text-align: center;
-      font-size: 32px;
       margin: 0;
     }
 
@@ -1110,7 +1122,6 @@ ul.slider {
       a {
         i {
           color: $second;
-          font-size: 50px;
           transition: color 0.3s;
         }
 
@@ -1144,12 +1155,16 @@ ul.slider {
     font-size: 80px;
   }
 
-  li {
-    font-size: 24px;
-  }
-
-  p {
-    font-size: 24px;
+  .about {
+    &-values {
+      &-single {
+        p {
+          &:first-of-type {
+            font-size: 100px;
+          }
+        }
+      }
+    }
   }
 }
 
@@ -1175,12 +1190,8 @@ ul.slider {
 }
 
 @media (max-width: 1550px) {
-  li {
-    font-size: 24px;
-  }
-
-  p {
-    font-size: 22px;
+  .enormous {
+    font-size: 28px;
   }
 
   .schedule {
@@ -1189,28 +1200,9 @@ ul.slider {
     }
   }
 
-  .day {
-    font-size: 32px;
-  }
-
   .pricing {
     .section-container {
       max-width: 1200px;
-    }
-
-    &-item {
-      &-title,
-      &-cost {
-        font-size: 34px;
-      }
-
-      &-description {
-        font-size: 22px;
-      }
-
-      .register-button {
-        font-size: 28px;
-      }
     }
   }
 
@@ -1218,80 +1210,18 @@ ul.slider {
     padding: 50px 0 0;
 
     .team-slider {
-      &-name {
-        font-size: 28px;
-      }
-
-      &-description {
-        font-size: 22px;
-      }
-
       &-wrapper {
         height: 420px;
       }
     }
   }
-
-  .contact-us {
-    .content {
-      &-grid {
-        :is(p, a) {
-          font-size: 26px;
-        }
-      }
-
-      &-socials {
-        a {
-          i {
-            font-size: 35px;
-          }
-        }
-      }
-    }
-  }
-
-  .footer {
-    h4,
-    p,
-    a {
-      font-size: 24px;
-    }
-  }
 }
 
 @media (max-width: 1500px) {
-  li {
-    font-size: 22px;
-  }
-
   .navigation,
   .footer {
     &-wrapper {
-      max-width: 1250px;
-    }
-  }
-
-  .footer {
-    &-wrapper {
-      :is(h4, p, a) {
-        font-size: 26px;
-      }
-    }
-  }
-
-  .section-container {
-    p {
-      font-size: 22px;
-    }
-  }
-
-  .schedule {
-    ul {
-      li {
-        .day {
-          font-size: 36px;
-        }
-      }
+      max-width: 100%;
     }
   }
 
@@ -1300,7 +1230,6 @@ ul.slider {
       li {
         p {
           &.names {
-            font-size: 28px;
             margin: 0 0 20px;
           }
         }
@@ -1310,31 +1239,33 @@ ul.slider {
 }
 
 @media (max-width: 1400px) {
+  body,
+  .medium {
+    font-size: 20px;
+  }
+
   .section {
     &-container {
       max-width: 600px;
-
-      p {
-        font-size: 20px;
-      }
     }
   }
 
   .about {
     padding: 45px 0 0;
-
-    p {
-      &:first-of-type {
-        margin: 30px 0;
+    &-wrapper {
+      p {
+        &:first-of-type {
+          margin: 30px 0;
+        }
       }
     }
-  }
 
-  .schedule {
-    ul {
-      li {
-        .day {
-          font-size: 32px;
+    &-values {
+      &-single {
+        p {
+          &:first-of-type {
+            font-size: 6vw;
+          }
         }
       }
     }
@@ -1352,32 +1283,14 @@ ul.slider {
     &-item {
       padding: 0 25px;
 
-      &-title,
-      &-cost {
-        font-size: 32px;
-      }
-
-      &-description {
-        font-size: 20px;
-      }
-
       .register-button {
         width: 220px;
-        font-size: 22px;
       }
     }
   }
 
   .our-team {
     padding: 0;
-  }
-
-  .contact-us {
-    .content-grid {
-      :is(p, a) {
-        font-size: 24px;
-      }
-    }
   }
 
   .footer {
@@ -1414,13 +1327,6 @@ ul.slider {
 }
 
 @media (max-width: 1300px) {
-  .navigation,
-  .footer {
-    &-wrapper {
-      max-width: 1150px;
-    }
-  }
-
   .navigation {
     &-menu {
       li {
@@ -1436,37 +1342,13 @@ ul.slider {
 
   .about {
     &-values {
-      &-single {
-        p {
-          &:first-of-type {
-            font-size: 100px;
-          }
-        }
-      }
-
       &-wrapper {
         max-width: 850px;
       }
     }
   }
 
-  .section {
-    &-container {
-      p {
-        font-size: 18px;
-      }
-    }
-  }
-
   .schedule {
-    ul {
-      li {
-        .day {
-          font-size: 28px;
-        }
-      }
-    }
-
     .section {
       &-container {
         max-width: 100%;
@@ -1475,49 +1357,27 @@ ul.slider {
     }
   }
 
-  .our-team {
-    .team-slider {
-      &-name {
-        font-size: 24px;
-      }
-
-      &-description {
-        font-size: 20px;
-      }
-    }
-  }
-
   .contact-us {
-    .content-grid {
-      :is(p, a) {
-        font-size: 22px;
-      }
-    }
-
     .content {
       max-width: 100%;
       padding: 100px 50px 100px 100px;
     }
   }
-
-  .footer {
-    &-wrapper {
-      :is(h4, p, a) {
-        font-size: 24px;
-      }
-
-      .social-media {
-        a {
-          i {
-            font-size: 40px;
-          }
-        }
-      }
-    }
-  }
 }
 
 @media (max-width: 1200px) {
+  h1 {
+    font-size: 7vw;
+  }
+
+  h2 {
+    font-size: 5.2vw;
+  }
+
+  .big {
+    font-size: 26px;
+  }
+
   .overflowed {
     overflow: unset;
   }
@@ -1627,11 +1487,6 @@ ul.slider {
 
         p {
           text-align: center;
-          font-size: 20px;
-
-          &:first-of-type {
-            font-size: 80px;
-          }
         }
       }
     }
@@ -1669,14 +1524,6 @@ ul.slider {
 }
 
 @media (max-width: 1000px) {
-  h1 {
-    font-size: 6.5vw;
-  }
-
-  h2 {
-    font-size: 5.5vw;
-  }
-
   .section {
     &-photo.two {
       width: 40%;
@@ -1705,7 +1552,7 @@ ul.slider {
     &-values {
       &-wrapper {
         flex-wrap: wrap;
-        max-width: 400px;
+        max-width: 500px;
       }
 
       &-single {
@@ -1784,6 +1631,10 @@ ul.slider {
 }
 
 @media (max-width: 900px) {
+  h2 {
+    font-size: 6vw;
+  }
+
   .fullsized {
     &-photo {
       opacity: 0.5;
@@ -1810,15 +1661,6 @@ ul.slider {
     &-item {
       &-title {
         width: 30%;
-        font-size: 28px;
-      }
-
-      &-cost {
-        font-size: 28px;
-      }
-
-      &-description {
-        font-size: 18px;
       }
 
       .register {
@@ -1873,14 +1715,14 @@ ul.slider {
 
 @media (max-width: 800px) {
   h1 {
-    font-size: 8.5vw;
+    font-size: 9vw;
   }
 
-  h2 {
-    font-size: 6.5vw;
+  .big {
+    font-size: 24px;
   }
 
-  p {
+  .small {
     font-size: 18px;
   }
 
@@ -1897,14 +1739,6 @@ ul.slider {
       &-slider {
         &-item {
           margin: 0 30px;
-        }
-
-        &-name {
-          font-size: 22px;
-        }
-
-        &-description {
-          font-size: 18px;
         }
 
         &-wrapper {
@@ -1941,7 +1775,7 @@ ul.slider {
       }
 
       &-description {
-        width: 50%;
+        width: 100%;
       }
 
       .register {
@@ -1954,6 +1788,11 @@ ul.slider {
 }
 
 @media (max-width: 700px) {
+  body,
+  .medium {
+    font-size: 18px;
+  }
+
   .navigation,
   .footer-bottom {
     &-logo {
@@ -1981,18 +1820,17 @@ ul.slider {
     }
   }
 
-  .central {
-    &-container {
-      &-description {
-        font-size: 24px;
-      }
-    }
-  }
-
   .about {
     &-values {
       &-wrapper {
         position: relative;
+      }
+      &-single {
+        p {
+          &:first-of-type {
+            font-size: 8vw;
+          }
+        }
       }
     }
   }
@@ -2009,7 +1847,6 @@ ul.slider {
 
       li {
         p.names {
-          font-size: 24px;
           margin: 0 0 10px;
         }
       }
@@ -2068,16 +1905,6 @@ ul.slider {
     }
   }
 
-  .contact-us {
-    .content {
-      &-grid {
-        :is(p, a) {
-          font-size: 20px;
-        }
-      }
-    }
-  }
-
   .modal {
     &-wrapper {
       max-width: 100%;
@@ -2093,25 +1920,19 @@ ul.slider {
       padding: 0 20px;
     }
   }
-
-  .footer {
-    &-wrapper {
-      :is(h4, p, a) {
-        font-size: 20px;
-      }
-    }
-  }
 }
 
 @media (max-width: 600px) {
-  h2 {
-    font-size: 7.5vw;
+  h1 {
+    font-size: 11vw;
   }
 
-  select,
-  input,
-  ::placeholder {
-    font-size: 20px;
+  h2 {
+    font-size: 8vw;
+  }
+
+  .big {
+    font-size: 22px;
   }
 
   .fullsized-photo {
@@ -2126,6 +1947,10 @@ ul.slider {
       transform: unset;
       translate: -50% -50%;
       height: 50vh;
+
+      .register-button {
+        width: 250px;
+      }
     }
   }
 
@@ -2155,14 +1980,6 @@ ul.slider {
 
         &:last-of-type {
           top: -10px;
-        }
-      }
-
-      &-bg {
-        ul {
-          li {
-            font-size: 30px;
-          }
         }
       }
     }
@@ -2220,14 +2037,6 @@ ul.slider {
 
       &-single {
         width: 48%;
-
-        p {
-          font-size: 18px;
-        }
-
-        p:first-of-type {
-          font-size: 60px;
-        }
       }
     }
   }
@@ -2285,23 +2094,13 @@ ul.slider {
 }
 
 @media (max-width: 500px) {
-  h1 {
-    font-size: 10vw;
-  }
-
-  select,
-  input,
-  ::placeholder {
-    font-size: 18px;
-  }
-
   input[type="submit"] {
     width: 80%;
     height: 50px;
   }
 
-  p.central {
-    font-size: 22px;
+  .small {
+    font-size: 16px;
   }
 
   .arrow {
@@ -2314,10 +2113,6 @@ ul.slider {
   .section {
     &-container {
       max-width: 300px;
-
-      p {
-        font-size: 16px;
-      }
     }
   }
 
@@ -2427,24 +2222,6 @@ ul.slider {
 }
 
 @media (max-width: 450px) {
-  h1 {
-    font-size: 50px;
-  }
-
-  h2 {
-    font-size: 45px;
-  }
-
-  .social {
-    &-media {
-      a {
-        i {
-          font-size: 40px;
-        }
-      }
-    }
-  }
-
   .testimonials {
     &-slider {
       .slick-prev {
@@ -2484,7 +2261,6 @@ ul.slider {
       .register {
         &-button {
           width: 150px;
-          font-size: 18px;
         }
       }
     }
@@ -2516,22 +2292,28 @@ ul.slider {
 }
 
 @media (max-width: 400px) {
+  h1 {
+    font-size: 50px;
+  }
+
   h2 {
     font-size: 40px;
   }
 
-  select,
-  input,
-  ::placeholder {
-    font-size: 16px;
+  .enormous {
+    font-size: 26px;
   }
 
-  #nav {
-    #menu-toggle {
-      &-bg {
-        ul {
-          li {
-            font-size: 25px;
+  .big {
+    font-size: 20px;
+  }
+
+  .about {
+    &-values {
+      &-single {
+        p {
+          &:first-of-type {
+            font-size: 40px;
           }
         }
       }
@@ -2565,26 +2347,12 @@ ul.slider {
     .register-button {
       margin: 80px 0 35px;
     }
-
-    &-slider {
-      li {
-        p {
-          font-size: 20px;
-        }
-      }
-    }
   }
 
   .our-team {
     .team {
       &-contact {
         margin: 80px 0 20px;
-      }
-
-      &-slider {
-        &-name {
-          font-size: 22px;
-        }
       }
     }
   }
@@ -2602,16 +2370,6 @@ ul.slider {
       &-wrapper {
         max-width: 100%;
         padding: 20px 50px;
-      }
-
-      &-single {
-        p {
-          font-size: 14px;
-
-          &:first-of-type {
-            font-size: 55px;
-          }
-        }
       }
     }
   }
@@ -2633,6 +2391,11 @@ ul.slider {
 }
 
 @media (max-width: 320px) {
+  body,
+  .medium {
+    font-size: 16px;
+  }
+
   h1 {
     font-size: 45px;
   }
@@ -2641,7 +2404,15 @@ ul.slider {
     font-size: 32px;
   }
 
-  p.central {
-    font-size: 20px;
+  .big {
+    font-size: 18px;
+  }
+
+  .about {
+    &-values {
+      &-wrapper {
+        padding: 20px 10px;
+      }
+    }
   }
 }
