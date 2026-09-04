@@ -3,10 +3,13 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "watch": "node-sass -o css scss/main.scss -w"
+    "watch": "sass --watch scss/main.scss:css/main.css --silence-deprecation=import --silence-deprecation=global-builtin"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": ""
+  "description": "",
+  "devDependencies": {
+    "sass": "^1.77.0"
+  }
 }
